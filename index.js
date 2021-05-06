@@ -108,7 +108,7 @@ async function animateInfoIn() {
 
 async function animateInfoOut() {
     const elems = [...siteState.timeline.cards, siteState.timeline.contentTitle, siteState.timeline.content];
-    siteState.timeline.runningAnimation = groupFadeAnimation(elems, 'out');https://zainafzal08.github.io/ali-afzal/ali
+    siteState.timeline.runningAnimation = groupFadeAnimation(elems, 'out');
     siteState.timeline.runningAnimationType = 'closing';
     await siteState.timeline.runningAnimation.finished;
     siteState.timeline.runningAnimation = null;
@@ -116,7 +116,7 @@ async function animateInfoOut() {
 
 async function renderTimeline() {
     const {runningAnimation, runningAnimationType} = siteState.timeline;
-    const {points, focused, container, cards} = siteState.timeline;
+    const {points, focused, container} = siteState.timeline;
     if (runningAnimation && runningAnimationType === 'closing') {
         return;
     } else if (runningAnimation && runningAnimationType === 'opening') {
