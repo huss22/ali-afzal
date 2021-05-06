@@ -108,7 +108,7 @@ async function animateInfoIn() {
 
 async function animateInfoOut() {
     const elems = [...siteState.timeline.cards, siteState.timeline.contentTitle, siteState.timeline.content];
-    siteState.timeline.runningAnimation = groupFadeAnimation(elems, 'out');
+    siteState.timeline.runningAnimation = groupFadeAnimation(elems, 'out');https://zainafzal08.github.io/ali-afzal/ali
     siteState.timeline.runningAnimationType = 'closing';
     await siteState.timeline.runningAnimation.finished;
     siteState.timeline.runningAnimation = null;
@@ -143,7 +143,7 @@ async function renderTimeline() {
 }
 
 async function init() {
-    siteState.config = await (await fetch('/config.json')).json();
+    siteState.config = await (await fetch('config.json')).json();
     initTimeline();
     renderTimeline();
 }
