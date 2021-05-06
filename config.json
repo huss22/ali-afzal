@@ -1,0 +1,34 @@
+{
+    "workHistory": [
+        {
+            "role": "Engineer",
+            "company": "Inchscape",
+            "range": "2017 to 2018"
+        },
+        {
+            "role": "Engineer 2",
+            "company": "Newscorp",
+            "range": "2017 to 2018"
+        },
+        {
+            "role": "Fiddiler",
+            "company": "Google",
+            "range": "2017 to 2018"
+        },
+        {
+            "role": "Big Mummy",
+            "company": "Mum incop.",
+            "range": "2017 to 2018"
+        },
+        {
+            "role": "Big Daddy",
+            "company": "Dad incop.",
+            "range": "2017 to 2018"
+        },
+        {
+            "role": "Big Child",
+            "company": "Child incop.",
+            "range": "2017 to 2018"
+        }
+    ]
+}
