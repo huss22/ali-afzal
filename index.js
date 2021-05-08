@@ -1,3 +1,9 @@
+function div(className) {
+    const e = document.createElement('div');
+    e.className = className;
+    return e;
+}
+
 function fadeAnimation(delay, total, direction) {
     let base = [
         { transform: 'scale(1)', opacity: 1, offset: delay/total},
@@ -21,7 +27,7 @@ const siteState = {
     timeline: {
         points: null,
         container: null,
-        cards: null,
+        cardsContainer: null,
         contentTitle: null,
         content: null,
         focused: 0,
@@ -47,7 +53,7 @@ function moveTimeline(delta) {
 }
 
 function initTimeline() { 
-    const cards = Array.from(document.querySelectorAll('.info .cards .card'));
+    const cardsContainer = document.querySelector('.info .cards');
     const container = document.querySelector('.timeline .entries');
     const contentTitle = document.querySelector('.info .title');
     const content = document.querySelector('.info .content');
@@ -68,7 +74,7 @@ function initTimeline() {
     siteState.timeline = {
         ...siteState.timeline,
         points,
-        cards,
+        cardsContainer,
         container,
         contentTitle,
         content,
@@ -98,7 +104,8 @@ function groupFadeAnimation(elements, direction) {
 }
 
 async function animateInfoIn() {
-    const elems = [...siteState.timeline.cards, siteState.timeline.contentTitle, siteState.timeline.content];
+    const cards = Array.from(siteState.timeline.cardsContainer.querySelectorAll('.card'));
+    const elems = [...cards, siteState.timeline.contentTitle, siteState.timeline.content];
     siteState.timeline.runningAnimation = groupFadeAnimation(elems, 'in');
     siteState.timeline.runningAnimationType = 'opening';
     await siteState.timeline.runningAnimation.finished;
@@ -107,7 +114,8 @@ async function animateInfoIn() {
 }
 
 async function animateInfoOut() {
-    const elems = [...siteState.timeline.cards, siteState.timeline.contentTitle, siteState.timeline.content];
+    const cards = Array.from(siteState.timeline.cardsContainer.querySelectorAll('.card'));
+    const elems = [...cards, siteState.timeline.contentTitle, siteState.timeline.content];
     siteState.timeline.runningAnimation = groupFadeAnimation(elems, 'out');
     siteState.timeline.runningAnimationType = 'closing';
     await siteState.timeline.runningAnimation.finished;
@@ -138,14 +146,36 @@ async function renderTimeline() {
     document.getElementById('timeline-role').innerText = job.role;
     document.getElementById('timeline-company').innerText = job.company;
     document.getElementById('timeline-range').innerText = job.range;
-
+    siteState.timeline.cardsContainer.innerHTML = '';
+    for (const cardText of job.cards) {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerText = cardText;
+        siteState.timeline.cardsContainer.appendChild(card);
+    }
     siteState.timeline.runningAnimation = await animateInfoIn();
+}
+
+function renderQuotes() {
+    const template = document.getElementById('quote-element');
+    for (const quote of siteState.config.quotes) {
+        const element = template.content.cloneNode(true);
+        element.querySelector('.quote>.bubble>h1').innerText = quote.headline;
+        element.querySelector('.quote>.bubble>p').innerText = quote.text;
+        element.querySelector('.quote>h1').innerText = quote.author;
+        element.querySelector('.quote>p').innerText = quote.authorTitle;
+
+        document.querySelector('.quotes .scrollable').appendChild(element);
+    }
 }
 
 async function init() {
     siteState.config = await (await fetch('config.json')).json();
     initTimeline();
     renderTimeline();
+    renderQuotes();
+    document.getElementById('contact-link').href = `mailto:${siteState.config.email}`;
+    
 }
 
 window.onload = init;

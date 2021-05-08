@@ -1,34 +1,92 @@
 {
+    "email": "ali.afzal.1416@gmail.com",
+    "quotes": [
+        {
+            "headline": "Strong Leader",
+            "text": "Stuff about me",
+            "author": "Person 1",
+            "authorTitle": "Person 1 title"
+        },
+        {
+            "headline": "Strategic",
+            "text": "Stuff about me",
+            "author": "Person 2",
+            "authorTitle": "Person 2 title"
+        },
+        {
+            "headline": "Innovative",
+            "text": "Stuff about me",
+            "author": "Person 3",
+            "authorTitle": "Person 3 title"
+        }
+    ],
     "workHistory": [
         {
             "role": "Engineer",
             "company": "Inchscape",
-            "range": "2017 to 2018"
+            "range": "2017 to 2018",
+            "cards": [
+                "hello world",
+                "hello world",
+                "hello world",
+                "hello world"
+            ]
         },
         {
             "role": "Engineer 2",
             "company": "Newscorp",
-            "range": "2017 to 2018"
+            "range": "2017 to 2018",
+            "cards": [
+                "hello world",
+                "hello world",
+                "hello world",
+                "hello world",
+                "hello world"
+            ]
         },
         {
             "role": "Fiddiler",
             "company": "Google",
-            "range": "2017 to 2018"
+            "range": "2017 to 2018",
+            "cards": [
+                "hello world",
+                "hello world",
+                "hello world",
+                "hello world"
+            ]
         },
         {
             "role": "Big Mummy",
             "company": "Mum incop.",
-            "range": "2017 to 2018"
+            "range": "2017 to 2018",
+            "cards": [
+                "hello world",
+                "hello world",
+                "hello world",
+                "hello world"
+            ]
         },
         {
             "role": "Big Daddy",
             "company": "Dad incop.",
-            "range": "2017 to 2018"
+            "range": "2017 to 2018",
+            "cards": [
+                "hello world",
+                "hello world",
+                "hello world",
+                "hello world"
+            ]
         },
         {
             "role": "Big Child",
             "company": "Child incop.",
-            "range": "2017 to 2018"
+            "range": "2017 to 2018",
+            "cards": [
+                "hello world",
+                "hello world",
+                "hello world",
+                "hello world"
+            ]
         }
     ]
 }
