@@ -19,20 +19,23 @@
         </div>
     </template>
     <nav>
-        <div class="left">
-            <a>Intro</a>
-            <a>My Journey</a>
-            <a>Achievements</a>
+        <div class="menu">
+            <a href="#hero">Home</a>
+            <a href="#journey">My Journey</a>
+            <a href="#achievements">Achievements</a>
+            <img id="menu-button" src="assets/img/menu.svg"/>
+            <div class="dropdown">
+                <a href="#hero">Home</a>
+                <a href="#journey">My Journey</a>
+                <a href="#achievements">Achievements</a>
+            </div>
         </div>
         <div class="center">
             <img src="assets/img/logo.svg">
         </div>
-        <div class="right">
-            <a href="#resume"><button>Resume</button></a>
-            <a href="#portfolio"><button class="secondary">Portfolio</button></a>
-        </div>
     </nav>
     <div class="hero">
+        <a class="anchor" id="hero"></a>
         <div class="text-container">
             <h1> Thought Data & BI Leader </h1>
             <p> I am a leader of high-end technology & finance projects from planning through to execution in time sensitive environments. A proactive team player with strong leadership, project management, communication and problem solving across accounting, data and business intelligence.</p> 
@@ -404,7 +407,8 @@
         </div>
     </div>
     <div class="resume">
-        <h1 id="resume"> Interactive Resume </h1>
+        <a class="anchor" id="resume"></a>
+        <h1> Interactive Resume </h1>
         <div class="timeline">
             <div class="entries">
             </div>
@@ -433,6 +437,7 @@
         </div>
     </div>
     <div class="about titled-section">
+        <a class="anchor" id="journey"></a>
         <h1>My Journey From an Accountant to a BI Specialist</h1>
         <p>I was always passionate about data, business intelligence and overall process improvements.</p>
         <div class="row">
@@ -441,6 +446,7 @@
         </div>
     </div>
     <div class="achievements titled-section">
+        <a class="anchor" id="achievements"></a>
         <h1>What have i achieved</h1>
         <p>Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.</p>
         <div class="flex-grid">
@@ -477,7 +483,8 @@
         </div>
     </div>
     <div class="projects titled-section">
-        <h1 id="portfolio">Some of my work across the organisations</h1>
+        <a class="anchor" id="portfolio"></a>
+        <h1>Some of my work across the organisations</h1>
         <p>I was always passionate about data, business intelligence and overall process improvements.</p>
         <div class="tiles">
             <div class="placeholder-tile"></div>

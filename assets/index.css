@@ -28,10 +28,15 @@
 }
 .titled-section h1 {
     width: 100%;
+    box-sizing: border-box;
+    padding: 0 32px;
+    font-size: 2em;
     text-align: center;
     margin-bottom: 8px;
 }
 .titled-section p {
+    box-sizing: border-box;
+    padding: 0 32px;
     text-align: center;
     color: var(--text-secondary);
 }
@@ -42,6 +47,29 @@
     justify-content: center;
     flex-wrap: wrap;
     padding: 32px 0;
+}
+a.anchor {
+    display: block;
+    position: relative;
+    top: calc(-1 * var(--nav-height));
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 1000px) {
+    .titled-section h1 {
+        font-size: 1.8em;
+    }
+    .titled-section p {
+        font-size: 1em;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .titled-section h1 {
+        font-size: 1.4em;
+    }
+    .titled-section p {
+        font-size: .8em;
+    }
 }
 
 body {
@@ -69,27 +97,79 @@ nav {
     font-weight: 700;
     font-size: 14px;
     color: var(--black);
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto auto;
     position: fixed;
     top: 0;
     background: white;
     z-index: 2;
 }
-nav>div {
+
+nav .menu {
     height: 100%;
     display: flex;
     align-items: center;
 }
+nav .center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 nav a {
     padding: 0 8px;
     cursor: pointer;
+    color: black;
+}
+nav a:hover {
+    color: var(--secondary-color);
 }
 nav img {
     height: 85%;
 }
-nav .right button {
-    margin: 0 8px;
+nav #menu-button {
+    display: none;
+}
+nav .menu img {
+    width: 32px;
+    cursor: pointer;
+}
+nav .dropdown {
+    position: absolute;
+    display: none;
+    width: 200px;
+    background: white;
+    top: var(--nav-height);
+    box-shadow: 0px 4px 12px 4px rgba(0, 0, 0, 0.07);
+    flex-direction: column;
+    border-radius: 12px;
+    padding: 8px 0;
+    opacity: 0;
+    transition: opacity .05s ease-in;
+}
+nav .dropdown a {
+    padding: 8px 16px;
+    color: #222;
+}
+nav .dropdown.open {
+    opacity: 1;
+    transition: opacity .05s ease-out;
+}
+nav .dropdown a:hover {
+    background: rgba(0, 0, 0, 0.07);
+}
+
+@media only screen and (max-width: 650px) {
+    nav .menu>a {
+        display: none;
+    }
+    nav #menu-button {
+       display: block;
+    }
+    nav .dropdown {
+        display: flex;
+    }
 }
 button {
     border-radius: 8px;
@@ -198,13 +278,15 @@ button.secondary {
     .hero p {
         font-size: .8em;
     }
+    .hero {
+        padding: 0 32px;
+    }
 }
 
 .summary {
     width: 100%;
-    height: 300px;
     box-sizing: border-box;
-    padding: 32px 48px;
+    padding: 48px;
     display: grid;
     border-top: 2px solid var(--seperator-color);
     grid-template-columns: 2fr 1fr 1fr;
@@ -212,6 +294,7 @@ button.secondary {
     grid-template-areas: 'text field1 field2' 'text field3 field4';
     --icon-size: 48px;
     column-gap: 24px;
+    row-gap: 24px;
 }
 .summary .text {
     grid-area: text;
@@ -237,7 +320,7 @@ button.secondary {
     width: var(--icon-size);
 }
 .summary .aside h1 {
-    font-size: 24px;
+    font-size: 1.3em;
     margin: 0;
 }
 .summary .aside p {
@@ -282,6 +365,36 @@ button.secondary {
     .summary .text {
         margin-bottom: 24px;
     }
+    .summary .aside h1 {
+        font-size: 1em;
+    }
+    .summary .aside p {
+        font-size: .9em;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .summary {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 'text text' 'field1 field2' 'field3 field4';
+        padding: 32px 32px;
+    }
+    .summary .text h1 {
+        font-size: 1.5em;
+    }
+    .summary .text p {
+        font-size: .9em;
+    }
+    .summary img {
+        width: 32px;
+    }
+    .summary .aside h1 {
+        font-size: .9em;
+    }
+    .summary .aside p {
+        font-size: .8em;
+    }   
 }
 
 .logos img {
@@ -466,8 +579,27 @@ button.secondary {
     padding-left: 32px;
     text-align: left;
     color: #444;
-    font-size: 1.2rem;
+    font-size: 1.5em;
 }
+
+@media only screen and (max-width: 1000px) {
+    .about .row p {
+        font-size: 1em;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .about .row {
+        flex-direction: column;
+        padding: 0 32px;
+        padding-top: 32px;
+    }
+    .about .row p {
+        padding: 0;
+        padding-top: 32px;
+        text-align: center;
+    }
+}
+
 
 .achievements .item {
     display: flex;
@@ -504,12 +636,29 @@ button.secondary {
     grid-template-rows: auto auto;
     gap: 16px;
 }
+
 .projects .placeholder-tile:nth-of-type(1) {
     grid-row: span 2;
 }
+
 .projects .placeholder-tile:nth-of-type(3) {
     grid-row: span 2;
 }
+
+@media only screen and (max-width: 650px) {
+    .projects .tiles {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        padding: 32px;
+    }
+    .projects .placeholder-tile:nth-of-type(1) {
+        grid-row: auto;
+    }
+    .projects .placeholder-tile:nth-of-type(3) {
+        grid-row: auto;
+    }
+}
+
 .projects .placeholder-tile {
     background: var(--primary-color);
 }
@@ -527,10 +676,21 @@ button.secondary {
     display: flex;
     justify-content: center;
 }
+@media only screen and (max-width: 1000px) {
+    .scrollable {
+        justify-content: flex-start;
+    }
+}
 .quotes .quote {
     display: flex;
     flex-direction: column;
     padding: 0 16px;
+}
+.quotes .quote:first-child {
+    padding-left: 32px;
+}
+.quotes .quote:last-child {
+    padding-right: 32px;
 }
 .quotes .quote .bubble {
     min-width: 350px;
@@ -584,7 +744,19 @@ button.secondary {
     color: white;
     font-size: 2.3em;
     margin: 0;
-    padding-bottom: 32px;
+    padding: 32px 64px;
+    text-align: center;
+}
+@media only screen and (max-width: 1000px) {
+    .contact h1 {
+        font-size: 2em;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .contact h1 {
+        padding: 32px;
+        font-size: 1.5em;
+    }
 }
 .contact button {
     background: white;

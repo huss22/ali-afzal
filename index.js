@@ -169,13 +169,23 @@ function renderQuotes() {
     }
 }
 
+function toggleDropdownMenu() {
+    siteState.dropdown.classList.toggle('open');
+}
+
+function closeDropdownMenu() {
+    siteState.dropdown.classList.remove('open');
+}
+
 async function init() {
     siteState.config = await (await fetch('config.json')).json();
+    siteState.dropdown = document.querySelector('nav .dropdown');
     initTimeline();
     renderTimeline();
     renderQuotes();
     document.getElementById('contact-link').href = `mailto:${siteState.config.email}`;
-    
+    document.getElementById('menu-button').addEventListener('click', () => toggleDropdownMenu());
+    siteState.dropdown.addEventListener('click', () => closeDropdownMenu());
 }
 
 window.onload = init;
