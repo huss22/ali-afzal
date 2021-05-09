@@ -134,6 +134,16 @@ nav #menu-button {
 nav .menu img {
     width: 32px;
     cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+button {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+a {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 nav .dropdown {
     position: absolute;
