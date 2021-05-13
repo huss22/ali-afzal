@@ -177,15 +177,87 @@ function closeDropdownMenu() {
     siteState.dropdown.classList.remove('open');
 }
 
+function throwModal(modalId) {
+    const root = document.querySelector('.modal');
+    const info = siteState.config.modals[modalId];
+    if (!info) return;
+
+    root.querySelector('[data-title]').innerText = info.title;
+    root.querySelector('[data-description]').innerText = info.description;
+    root.querySelector('[data-roles]').innerHTML = '';
+    for (const role of info.roles) {
+        const chip = document.createElement('div');
+        chip.classList.add('chip');
+        chip.innerText = role;
+        root.querySelector('[data-roles]').appendChild(chip);
+    }
+    const smallScreen = window.matchMedia('(max-width: 550px)').matches;
+    new TradingView.MediumWidget(
+        {
+        "symbols": [info.symbols],
+        "chartOnly": smallScreen,
+        "width": "100%",
+        "height": "100%",
+        "locale": "en",
+        "colorTheme": "light",
+        "gridLineColor": "#F0F3FA",
+        "trendLineColor": "#2196F3",
+        "fontColor": "#787B86",
+        "underLineColor": "#E3F2FD",
+        "isTransparent": false,
+        "autosize": true,
+        "container_id": "tradingview_b46a1"
+    });
+    root.classList.add('shown');
+    document.body.style.overflow = 'none';
+}
+
+function closeModal() {
+    const root = document.querySelector('.modal');
+    if (!root.classList.contains('shown')) {
+        return;
+    }
+    root.classList.remove('shown');
+    document.body.style.overflow = 'scroll';
+}
+
+function onBodyClick(e) {
+    const path = e.composedPath().map(e => e.id);
+    if (!path.includes("menu-button")) {
+        closeDropdownMenu();
+    }
+    if (!path.includes("modal-card") && !path.includes('companies')) {
+        closeModal();
+    }
+}
+
+function initModals() {
+    for (const target of document.querySelectorAll('[data-throw-modal]')) {
+        target.addEventListener('click', () => {
+            throwModal(target.dataset.throwModal);
+        });
+    }
+}
+
+function onKeyPress(e) {
+    if (e.key === "Escape") {
+        closeModal();
+    }
+}
+
 async function init() {
     siteState.config = await (await fetch('config.json')).json();
     siteState.dropdown = document.querySelector('nav .dropdown');
     initTimeline();
-    renderTimeline();
+    await renderTimeline();
     renderQuotes();
+    initModals();
     document.getElementById('contact-link').href = `mailto:${siteState.config.email}`;
     document.getElementById('menu-button').addEventListener('click', () => toggleDropdownMenu());
-    siteState.dropdown.addEventListener('click', () => closeDropdownMenu());
+    document.body.style.overflow = 'scroll';
+    document.querySelector('.cover').classList.add('hidden');
+    document.body.addEventListener('click', onBodyClick);
+    document.body.addEventListener('keydown', onKeyPress);
 }
 
 window.onload = init;

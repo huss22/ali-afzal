@@ -20,6 +20,17 @@
             "authorTitle": "Person 3 title"
         }
     ],
+    "modals": {
+        "newscorp": {
+            "title": "Newscorp Australia",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam odio et urna pellentesque condimentum. Praesent auctor pellentesque tortor.",
+            "roles": [
+                "General Manager, Finance Stratagy & Data",
+                "Finance and Reporting Manager"
+            ],
+            "symbols": ["News", "ASX:NWS|12M"]
+        }
+    },
     "workHistory": [
         {
             "role": "Engineer",
