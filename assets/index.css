@@ -577,7 +577,7 @@ button.secondary {
 }
 .resume .info {
     width: 100%;
-    height: 600px;
+    padding-bottom: 32px;
     background: #F8f8f8;
 }
 .resume .info .cards {
@@ -590,6 +590,9 @@ button.secondary {
 .resume .info .cards .card {
     min-width: 250px;
     max-width: 250px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 16px;
     height: 150px;
     background: white;
     border-radius: 12px;
@@ -601,7 +604,7 @@ button.secondary {
 }
 
 .resume .info .title, .resume .info .content {
-    padding: 48px 64px 0 64px;
+    padding: 32px 64px 0 64px;
 }
 .resume .info .title h1 {
     margin: 0;
@@ -616,16 +619,37 @@ button.secondary {
     padding: 0;
     color: var(--text-muted);
 }
-.resume .info .content {
+.resume .info .content .text {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
-
+.resume .info .content .labels {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 16px;
+}
+.resume .info .content .labels span {
+    color: #444;
+    font-weight: bold;
+}
+.resume .info .content .labels span:first-child {
+    width: 66%
+}
+.resume .info .content .labels span:nth-child(2) {
+    width: 33%
+}
 .resume .info .content p {
-    width: 30%;
     padding: 0;
     margin: 0;
     height: 100%;
+    color: #444;
+    width: 66%;
+}
+.resume .info .content ul {
+    margin: 0;
+    width: 33%;
     color: #444;
 }
 

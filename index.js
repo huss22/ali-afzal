@@ -122,6 +122,17 @@ async function animateInfoOut() {
     siteState.timeline.runningAnimation = null;
 }
 
+function fillParagraphs(root, paragraphs) {
+    root.innerHTML = '';
+    for (let i = 0; i < paragraphs.length; i++) {
+        const paragraph = paragraphs[i];
+        root.appendChild(document.createTextNode(paragraph));
+        if (i !== paragraphs.length - 1) {
+            root.appendChild(document.createElement('br'));   
+        }                
+    }
+}
+
 async function renderTimeline() {
     const {runningAnimation, runningAnimationType} = siteState.timeline;
     const {points, focused, container} = siteState.timeline;
@@ -153,20 +164,15 @@ async function renderTimeline() {
         card.innerText = cardText;
         siteState.timeline.cardsContainer.appendChild(card);
     }
-    siteState.timeline.runningAnimation = await animateInfoIn();
-}
-
-function renderQuotes() {
-    const template = document.getElementById('quote-element');
-    for (const quote of siteState.config.quotes) {
-        const element = template.content.cloneNode(true);
-        element.querySelector('.quote>.bubble>h1').innerText = quote.headline;
-        element.querySelector('.quote>.bubble>p').innerText = quote.text;
-        element.querySelector('.quote>h1').innerText = quote.author;
-        element.querySelector('.quote>p').innerText = quote.authorTitle;
-
-        document.querySelector('.quotes .scrollable').appendChild(element);
+    fillParagraphs(document.getElementById('timeline-description'), job.description);
+    const listRoot = document.getElementById('timeline-responsibilities');
+    listRoot.innerHTML = '';
+    for (const r of job.responsibilities) {
+        const li = document.createElement('li');
+        li.innerText = r;
+        listRoot.appendChild(li);
     }
+    siteState.timeline.runningAnimation = await animateInfoIn();
 }
 
 function toggleDropdownMenu() {
@@ -245,12 +251,38 @@ function onKeyPress(e) {
     }
 }
 
+function doDataFills() {
+    for (const element of document.querySelectorAll('[data-fill]')) {
+        const fieldName = element.dataset.fill;
+        const data = siteState.config[fieldName];
+        if (typeof data !== 'string') {
+            fillParagraphs(element, data);
+        } else {
+            element.innerText = data;
+        }
+    }
+
+    for (const root of document.querySelectorAll('[data-fill-list]')) {
+        root.innerHTML = '';
+        const template = document.getElementById(root.dataset.fillTemplate);
+        const field = root.dataset.fillList;
+        
+        for (const data of siteState.config[field]) {
+            const element = template.content.cloneNode(true);
+            for (const bindingElement of element.querySelectorAll('[data-input]')) {
+                bindingElement.innerText = data[bindingElement.dataset.input];
+            }
+            root.appendChild(element);
+        }
+
+    }
+}
+
 async function init() {
     siteState.config = await (await fetch('config.json')).json();
     siteState.dropdown = document.querySelector('nav .dropdown');
     initTimeline();
     await renderTimeline();
-    renderQuotes();
     initModals();
     document.getElementById('contact-link').href = `mailto:${siteState.config.email}`;
     document.getElementById('menu-button').addEventListener('click', () => toggleDropdownMenu());
@@ -258,6 +290,7 @@ async function init() {
     document.querySelector('.cover').classList.add('hidden');
     document.body.addEventListener('click', onBodyClick);
     document.body.addEventListener('keydown', onKeyPress);
+    doDataFills();
 }
 
 window.onload = init;

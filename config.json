@@ -1,5 +1,42 @@
 {
     "email": "ali.afzal.1416@gmail.com",
+    "headline": "I am a leader of high-end technology & finance projects from planning through to execution in time sensitive environments. A proactive team player with strong leadership, project management, communication and problem solving across accounting, data and business intelligence.",
+    "journeySubtitle": "I was always passionate about data, business intelligence and overall process improvements.",
+    "journeyDetailed": [
+        "I believe my passion is helping me grow into a better leader each day. I am able to seamlessly and easily bring technical and non technical stakeholders along the data journey whilst building a highly engaged environment.",
+        "I started my career as a financial accountant working for Rydges hotels and very quickly discovered my love and passion for data and reporting. At that time it was called management reporting. I started to upskill myself my learning new systematic skill sets to help me improve reporting, data and process optimization. I truly started to become embedded in data warehouse and BI when I started my journey with Toll Dnata, it was a very challenging role which required me to find proactive solutions to solve organisational data challenges. I was able to develop an end-to-end system to track operational, financial and management performance with ease as well connecting with external stakeholders.",
+        "I took the learnings and joined up with News Corp and the organization gave me the scope to scale my abilities in a larger organization. I challenged myself to develop automated data solutions to help me automate and simplify budgeting processes, targeting processes and seamlessly provide performance reporting across sales, operations and financials. I helped roll out CRM systems, develop data warehouse solution for communities papers and finally embarked on a journey to help launch a new brand for the organization.",
+        "I was offered the opportunity to head up business intelligence department for Subaru. I was able to quickly upskill myself, collaborate with technical and non technical stakeholders to deliver a world class BI solution. This opportunity provided me to develop a data strategy, implement the strategy and help grow the organizational data needs & wants. I received global recognition for my work and was offered the opportunity to lead the data strategy work for Australia and Asia Inchcape. I set up an offshore team to help leverage data solution and work across borders, different countries, different systems to help unify towards one data platform. Automating processes through data, automated business intelligence reporting and working towards machine learning models to help track performance, grow profitability and identify risks & opportunities.",
+        "Finally, I joined News Corp to lead the finance data strategy and transformation. Working closely with technology team, finance teams, executive team and organisational stakeholders to deliver a unified finance data solution. Implementation of the strategy was instrumental in reducing errors, achieving timely reporting, simplifying data structures, rolling out governance and developing new insights and analytics. ",
+        "I have also worked with extremely passionate leaders who have mentored me and guided me in my journey. Through great leadership and mentorship I have been able to become the leader I am and have led many teams to success. I believe in being passionate about what you do and having fun whilst delivering business results."
+    ],
+    "achievementsSubtitle": "Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.",
+    "achievements": [
+        {
+            "title": "grape thing",
+            "description": "lorem ipsum"
+        },
+        {
+            "title": "grape thing",
+            "description": "lorem ipsum"
+        },
+        {
+            "title": "grape thing",
+            "description": "lorem ipsum"
+        },
+        {
+            "title": "grape thing",
+            "description": "lorem ipsum"
+        },
+        {
+            "title": "grape thing",
+            "description": "lorem ipsum"
+        },
+        {
+            "title": "grape thing",
+            "description": "lorem ipsum"
+        }
+    ],
     "quotes": [
         {
             "headline": "Strong Leader",
@@ -33,70 +70,220 @@
     },
     "workHistory": [
         {
-            "role": "Engineer",
-            "company": "Inchscape",
-            "range": "2017 to 2018",
+            "role": "???",
+            "company": "NewsCorp",
+            "range": "???",
             "cards": [
-                "hello world",
-                "hello world",
-                "hello world",
-                "hello world"
+                "Streamlined weekly and  monthly finance data processes",
+                "Successfully implement finance data strategy",
+                "Led the development of unified finance data structures",
+                "Led the development of unified executive reporting suite",
+                "Successfully implemented and led automation & efficiencies"
+            ],
+            "description": [
+                "As General Manager of Finance Strategy & data team, my focus has been on leading the finance data strategy to enable simplification, enhance process efficiency, automate redundant processes, develop a single source of truth for finance with clear lineage to operational metrics and leading the team to grow and develop.",
+                "My role requires me to work closely with business stakeholders, senior executives, technical IT teams and finance team to help deliver world class finance solutions through data and analytics. ",
+                "In my role, my team and I have been pivotal in pushing the boundaries of analytics. We have pioneered new finance dashboards which are faster, accurate, available in a timely manner, more scalable, cross platform and with better user experience & interface (UI/UX).",
+                "We have made it simpler for end users to access, interact and gather insights from unified data sources that display a single source of truth. We have also proactively set up knowledge bank where all of finance teams could collaborate with each other, share and preserve organisational knowledge.",
+                "We have also introduced data literacy programs where we proactively teach our end users on data, business intelligence, reporting, capturing insights, interacting with data and data dictionaries. ",
+                "Our team is the most effective and most engaged, they have been instrumental in delivering data driven solutions to help support key decisions across the organisational functions.",
+                "Finally, we have helped stabilise and improve the data structures which has led to faster month end closures, accurate reporting, timely updates and reducing redundant efforts. We have also helped break down silos with other departments which has helped increase productivity and added more business value. We have ensured every step of the way to follow principles of simplicity, adding business value, collaboration and celebrating the passion of learning & development."
+            ],
+            "responsibilities": [
+                "Be the thought-leader in defining the data strategy and data roadmap, and determine how best to leverage data assets that support the finance strategy",
+                "Create the strategy and roadmap for an environment that makes data and information accessible across the organization",
+                "Provide expertise and consult on all major data-related initiatives",
+                "Manage the lifecycle of data and information in order to grow data needs & wants",
+                "Develop an environment to power data literacy",
+                "Engage and lead team to success",
+                "Drive decision-making on how to source, store, analyze, and exploit data",
+                "Enhance and simplify month, weekly and annual processes",
+                "Stabilise and enhance Business Intelligence platform",
+                "Proactively identify and implement efficient and automated processes",
+                "Develop single source of truth for finance",
+                "Develop business reporting suite with complete drill through capabilities",
+                "Implement finance to operational budget",
+                "Oversee cross-functional data governance, adoption and adherence to data quality and process governance in the relevant collaborating departments",
+                "Drive and enforce data quality standards across the business"
             ]
         },
         {
-            "role": "Engineer 2",
-            "company": "Newscorp",
-            "range": "2017 to 2018",
+            "role": "???",
+            "company": "Inchcape",
+            "range": "???",
             "cards": [
-                "hello world",
-                "hello world",
-                "hello world",
-                "hello world",
-                "hello world"
+                "Winner CEO award for innovating, leading & pioneering in BI Technology",
+                "Successfully implemented a regional BI & Data Strategy",
+                "Led the development of a unified data warehouse in SAP",
+                "Led the development of business and executive dashboards",
+                "Successfully enhanced existing processes to reduce time & effort"
+            ],
+            "description": [
+                "After successfully implementing the business intelligence and data strategy for Subaru Australia & NZ, I was promoted to lead the data strategy across Inchcape Australia, NZ and Asia. In my role as Head of Regional BI, I developed the data and BI strategy to move the organisation into a unified data structure using SAP S4 HANA with Power BI.",
+                "I set up an offshore team of data engineers, developers and analysts in Philippines that helped roll out the data strategy across all the countries in a seamless manner. This model was cost effective and scalable to help grow the BI vision for Inchcape. This required set up, on boarding, training and development of the offshore team.",
+                "During my time of employment, the team and I successfully delivered a single source of truth for data with executive reporting suite known as the heartbeat. The team and I developed data connections to several different ERP systems across multiple different countries in a seamless manner to help track our performance to budgets/forecasts and targets. ",
+                "Once we set up the foundational data sets, we were able to quickly pivot our data structures to jump into machine learning models to bring insights and analytics. We challenged ourselves to learn and develop new skills to provide world class solutions to the organization and helping add value. ",
+                "We also implemented financial solutions to simplify reporting, budgeting and forecasting across the countries in a simplified manner with consistencies. This helped reduced redundant workflows and provided clearer direction.",
+                "Finally, the team model and data strategy was also adopted by global team and we were pinnacle to pioneering the BI vision. We constantly innovated, pushed the boundaries and kept the teams engaged throughout the journey. "
+            ],
+            "responsibilities": [
+                "Develop and implement regional data & BI strategy",
+                "Drive how the business captures, maintains, and presents data and information",
+                "Develop single source of truth for vehicles, aftersales and finance",
+                "Leverage and develop external data sources to grow insights & analytics",
+                "Create and sustain vibrant data organization, technologies, processes, and policies across the business",
+                "Drive enterprise-level digital transformation innovation, cost reduction, and revenue generation",
+                "Set up offshore data engineering and BI team",
+                "Develop unified executive and business reporting suite",
+                "Develop machine learning models",
+                "Reduce inefficiencies and implement automated workflows",
+                "Be an advocate for BI and proactively train end users on data literacy",
+                "Establish and enforce data Policies and Standards across the organisation",
+                "Champion and drive Master Data Management & Metadata Management of the business to create a strategic asset from our data."
             ]
         },
         {
-            "role": "Fiddiler",
-            "company": "Google",
-            "range": "2017 to 2018",
+            "role": "???",
+            "company": "Subaru",
+            "range": "???",
             "cards": [
-                "hello world",
-                "hello world",
-                "hello world",
-                "hello world"
+                "Winner CEO award for innovating, leading & pioneering in BI Technology",
+                "Successfully implemented Subaru Data Strategy",
+                "Led the development of a unified data warehouse in SAP",
+                "Led the development of business and executive dashboards",
+                "Successfully enhanced existing processes to reduce time & effort"
+            ],
+            "description": [
+                "I was given the wonderful opportunity to head up the business intelligence team for Subaru Australia. I was required to develop a data & BI strategy and develop internal skills to leverage analytics and insights. The journey was extremely fulfilling and I received immense support to develop & implement the Subaru vision for business intelligence.",
+                "My team and I helped roll out SAP ERP along with developing a complete data warehouse solution across vehicle operations, sales, vehicle aftersales, finance, warranty, operations and marketing. ",
+                "The warehouse solution was not limited to internal data but also involved blending data from external sources to help power the organisational analytical needs and our move towards predictive analytics.",
+                "By the end of our BI journey we had truly developed a scalable product which was adopted for regional and global BI & data strategy.",
+                "Our team were able to help reduce extremely manual processes across the organisation whilst providing clarity across performance. ",
+                "Two major development which helped save money, time and brought accuracy were:",
+                "1. Structure Margin Payments for dealership. Our team were able to develop an automated, audited process that leveraged data to calculate a very complicated quarterly payment process for dealers which helped save $1m-$2m per quarter.",
+                "2. ACCC Warranty reporting. Our team were pivotal in providing warranty reporting to ACCC due to vehicle recalls. This required looking through millions of record of data to identify affected vehicles to proactively resolve the issue, this helped save lives and we were able to quickly pivot and turn this around via a seamless data solution."
+            ],
+            "responsibilities": [
+                "Develop and implement regional data & BI strategy",
+                "Establish the strategic direction for building the business’s data management program and optimise how the business uses data both internally and externally",
+                "Be responsible for data and platform architecture, custodianship, infrastructure, data engineering and data models to support Use Cases across BI and Analytics",
+                "Develop single source of truth for vehicles, aftersales and finance",
+                "Leverage and develop external data sources to grow insights & analytics",
+                "Develop unified executive and business reporting suite",
+                "Reduce inefficiencies and implement automated workflows",
+                "Be an advocate for BI and proactively train end users on data literacy",
+                "Develop internal capabilities to support BI growth",
+                "Be the change driver in rolling out BI across the organisation"
             ]
         },
         {
-            "role": "Big Mummy",
-            "company": "Mum incop.",
-            "range": "2017 to 2018",
+            "role": "???",
+            "company": "NewsCorp",
+            "range": "???",
             "cards": [
-                "hello world",
-                "hello world",
-                "hello world",
-                "hello world"
+                "Helped launch reporting Suite for a new department (News Xtend)",
+                "Developed Single Source of Truth for Customers",
+                "Successfully set budgets for 6 years with 99% accuracy",
+                "Successfully managed and led high performing team",
+                "Rolled out finance models, and reporting suites"
+            ],
+            "description": [
+                "I spent 6 years at News Corp leading the overall financial and operational reporting of the community papers across Australia and also was pivotal in launching a brand new brand (News Xtend).",
+                "I was responsible for developing budgets, forecasts and targets for the sales team and providing a seamless experience to track performance. My team and I developed clarity in reporting which helped track performance, reduce redundant processes and implemented new systems to power reporting & insights.",
+                "Our team was instrumental in pushing the agenda forward for better data & insights, we proactively developed solutions which could be leveraged by other teams. Our financial models ensured we were able to accurately budget and forecast for 6 years.",
+                "Finally, I proactively helped launch a new brand for News Corp which has now become one of the biggest revenue generator. This required setting up the systems, contracts, financial KPI’s, operational KPI’s, budgets, forecasts and financial strategy."
+            ],
+            "responsibilities": [
+                "Develop annual budget & forecasts",
+                "Automate & report on weekly, monthly, quarterly and annual reporting",
+                "Develop financial models to support insights and analytics",
+                "Develop a high performing team",
+                "Roll out and lead process improvements across the organization",
+                "Implement system roll outs",
+                "Streamline operational, financial and executive reporting",
+                "Set up single source of truth for customer, agency and portfolio",
+                "Proactively roll out reporting across Tableau, Business Objects and salesforce",
+                "Unify ERP systems to a single source of truth",
+                "Set up a scalable data solution to power News Xtend"
             ]
         },
         {
-            "role": "Big Daddy",
-            "company": "Dad incop.",
-            "range": "2017 to 2018",
+            "role": "???",
+            "company": "Dnata",
+            "range": "???",
             "cards": [
-                "hello world",
-                "hello world",
-                "hello world",
-                "hello world"
+                "Successfully automated Airline reporting",
+                "Developed an automated payroll reporting solution",
+                "Developed data warehouse solution",
+                "Developed powerful insights & analytics through data",
+                "Rolled out process improvements"
+            ],
+            "description": [
+                "I spent 6 years at News Corp leading the overall financial and operational reporting of the community papers across Australia and also was pivotal in launching a brand new brand (News Xtend).",
+                "I was responsible for developing budgets, forecasts and targets for the sales team and providing a seamless experience to track performance. My team and I developed clarity in reporting which helped track performance, reduce redundant processes and implemented new systems to power reporting & insights.",
+                "Our team was instrumental in pushing the agenda forward for better data & insights, we proactively developed solutions which could be leveraged by other teams. Our financial models ensured we were able to accurately budget and forecast for 6 years.",
+                "Finally, I proactively helped launch a new brand for News Corp which has now become one of the biggest revenue generator. This required setting up the systems, contracts, financial KPI’s, operational KPI’s, budgets, forecasts and financial strategy."
+            ],
+            "responsibilities": [
+                "Develop annual budget & forecasts",
+                "Automate & report on weekly, monthly, quarterly and annual reporting",
+                "Develop financial models to support insights and analytics",
+                "Develop a high performing team",
+                "Roll out and lead process improvements across the organization",
+                "Implement system roll outs",
+                "Streamline operational, financial and executive reporting",
+                "Set up single source of truth for customer, agency and portfolio",
+                "Proactively roll out reporting across Tableau, Business Objects and salesforce",
+                "Unify ERP systems to a single source of truth",
+                "Set up a scalable data solution to power News Xtend"
             ]
         },
         {
-            "role": "Big Child",
-            "company": "Child incop.",
-            "range": "2017 to 2018",
+            "role": "???",
+            "company": "Featherdale",
+            "range": "???",
             "cards": [
-                "hello world",
-                "hello world",
-                "hello world",
-                "hello world"
+                "Managed entire divisional financials",
+                "Managed fixed assets register",
+                "Managed month end reporting",
+                "Implemented process efficiencies"
+            ],
+            "description": [
+                "I took on the financial controller position for Featherdale wildlife park and Pier 26 bar which are both subsidiaries of Amalgamated Hotels Limited. At the same time, I was shadowing Rydges hotel financial controllers on how to manage the P&L, creating budgets, forecasts and tracking performance.",
+                "I learnt to manage the entire P&L and helped roll out performance management reporting to identify risks and opportunities. I also looked after the fixed assets register and providing interactive reporting on performance across the divisions I managed."
+            ],
+            "responsibilities": [
+                "Develop budgets and forecasts",
+                "Develop month end reporting suite",
+                "Manage fixed assets register",
+                "Manage month end process and payroll",
+                "Manage bank reconciliations",
+                "Manage divisional cashflow",
+                "Implement and roll out process efficiencies"
+            ]
+        },
+        {
+            "role": "???",
+            "company": "Rydges",
+            "range": "???",
+            "cards": [
+                "Developed management reporting suite",
+                "Automated Cash Flow reporting",
+                "Automated bank reconciliation process",
+                "Implemented process efficiencies"
+            ],
+            "description": [
+                "I started my career as a financial accountant working for Rydges hotel which is a subsidiary of Amalgamated Holdings Limited who also own Event cinemas, Featherdale wildlife park and bars across Australia & New Zealand. ",
+                "I developed management reporting for all owned and managed hotels with ability to track performance of occupancy vs sales vs costs on a national dashboard suite. This helped me understand my passion for reporting and process optimisation. ",
+                "I started to further develop my skills in reporting, data management and process improvement. I automated many business processes including bank reconciliations, hotel cash flow and month end reporting. "
+            ],
+            "responsibilities": [
+                "Develop budgets and forecasts",
+                "Develop month end reporting suite",
+                "Manage month end process and payroll",
+                "Manage bank reconciliations",
+                "Manage consolidated hotel cashflow",
+                "Implement and roll out process efficiencies"
             ]
         }
     ]

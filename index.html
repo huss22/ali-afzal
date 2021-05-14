@@ -8,14 +8,21 @@
     <link rel="stylesheet" href="assets/index.css">
   </head>
   <body>
-    <template id="quote-element">
+    <template id="quote">
         <div class="quote">
             <div class="bubble">
-                <h1>Strong Leader</h1>
-                <p>Stuff about me</p>
+                <h1 data-input="headline"></h1>
+                <p data-input="text"></p>
             </div>
-            <h1>Person 1</h1>
-            <p>Person 1 title</p>
+            <h1 data-input="author"></h1>
+            <p data-input="authorSubtitle"></p>
+        </div>
+    </template>
+    <template id="achievement">
+        <div class="item">
+            <div class="placeholder-icon"></div>
+            <h1 data-input="title"></h1>
+            <p data-input="description"></p>
         </div>
     </template>
     <nav>
@@ -38,7 +45,7 @@
         <a class="anchor" id="hero"></a>
         <div class="text-container">
             <h1> Thought Data & BI Leader </h1>
-            <p> I am a leader of high-end technology & finance projects from planning through to execution in time sensitive environments. A proactive team player with strong leadership, project management, communication and problem solving across accounting, data and business intelligence.</p> 
+            <p data-fill="headline"></p> 
             <div class="cta">
                 <a href="#resume"><button>Resume</button></a>
                 <a href="#portfolio"><button class="secondary">Portfolio</button></a>
@@ -430,57 +437,31 @@
                 <p> <span id="timeline-company"></span> · <span id="timeline-range"></span> </p>
             </div>
             <div class="content">
-                <p>Hello this is block one text which will be a block of text for block 1 innit bruv love u</p>
-                <p>Hello this is block two text which will be a block of text for block 2 innit bruv love u</p>
-                <p>Hello this is block two text which will be a block of text for block 3 innit bruv love u</p>
+                <div class="labels">
+                    <span>Description</span>
+                    <span>Responsibilities</span>
+                </div>
+                <div class="text">
+                    <p id="timeline-description"></p>
+                    <ul id="timeline-responsibilities"></ul>
+                </div>
             </div>
         </div>
     </div>
     <div class="about titled-section">
         <a class="anchor" id="journey"></a>
         <h1>My Journey From an Accountant to a BI Specialist</h1>
-        <p>I was always passionate about data, business intelligence and overall process improvements.</p>
+        <p data-fill="journeySubtitle"></p>
         <div class="row">
             <img src="assets/img/MyPic.jfif"/>
-            <p>This is a bit of a about me section, shouldn’t be too long but should help people on the journey of how I got started in accounting and how I came across BI, data, system development and overall process improvement & automation.</p>
+            <p data-fill="journeyDetailed"></p>
         </div>
     </div>
     <div class="achievements titled-section">
         <a class="anchor" id="achievements"></a>
         <h1>What have i achieved</h1>
-        <p>Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.</p>
-        <div class="flex-grid">
-            <div class="item">
-                <div class="placeholder-icon"></div>
-                <h1>Robust workflow</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.</p>
-            </div>
-            <div class="item">
-                <div class="placeholder-icon"></div>
-                <h1>Scalable BI Roll Out</h1>
-                <p>Successully implemented SAP S4 HANA with a sophisticated data warehouse solution to enable dynamic BI capabilities across Inchcape Australasia</p>
-            </div>
-            <div class="item">
-                <div class="placeholder-icon"></div>
-                <h1>Robust workflow</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.</p>
-            </div>
-            <div class="item">
-                <div class="placeholder-icon"></div>
-                <h1>Robust workflow</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.</p>
-            </div>
-            <div class="item">
-                <div class="placeholder-icon"></div>
-                <h1>Robust workflow</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.</p>
-            </div>
-            <div class="item">
-                <div class="placeholder-icon"></div>
-                <h1>Robust workflow</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.</p>
-            </div>
-        </div>
+        <p data-fill="achievementsSubtitle"></p>
+        <div class="flex-grid" data-fill-list="achievements" data-fill-template="achievement"></div>
     </div>
     <div class="projects titled-section">
         <a class="anchor" id="portfolio"></a>
@@ -496,9 +477,7 @@
     <div class="quotes titled-section">
         <h1>What my colleagues and my managers say about me</h1>
         <p>I have been working collaboratively for all my career and have built strong relationships with everyone I have worked with in the past.</p>
-        <div class="scrollable">
-
-        </div>
+        <div class="scrollable" data-fill-list="quotes" data-fill-template="quote"></div>
     </div>
     <div class="contact">
         <h1>Get in Contact with me and find out how I could help assist!</h1>
