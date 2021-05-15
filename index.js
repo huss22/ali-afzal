@@ -159,10 +159,14 @@ async function renderTimeline() {
     document.getElementById('timeline-range').innerText = job.range;
     siteState.timeline.cardsContainer.innerHTML = '';
     for (const cardText of job.cards) {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'card-wrapper';
+
         const card = document.createElement('div');
         card.className = 'card';
         card.innerText = cardText;
-        siteState.timeline.cardsContainer.appendChild(card);
+        wrapper.appendChild(card);
+        siteState.timeline.cardsContainer.appendChild(wrapper);
     }
     fillParagraphs(document.getElementById('timeline-description'), job.description);
     const listRoot = document.getElementById('timeline-responsibilities');
