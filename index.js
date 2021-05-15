@@ -270,7 +270,12 @@ function doDataFills() {
         for (const data of siteState.config[field]) {
             const element = template.content.cloneNode(true);
             for (const bindingElement of element.querySelectorAll('[data-input]')) {
-                bindingElement.innerText = data[bindingElement.dataset.input];
+                if (bindingElement.dataset.inputBind) {
+                    const attr = bindingElement.dataset.inputBind;
+                    bindingElement.setAttribute(attr, data[bindingElement.dataset.input]);
+                } else {
+                    bindingElement.innerText = data[bindingElement.dataset.input];   
+                }
             }
             root.appendChild(element);
         }
@@ -290,6 +295,8 @@ async function init() {
     document.querySelector('.cover').classList.add('hidden');
     document.body.addEventListener('click', onBodyClick);
     document.body.addEventListener('keydown', onKeyPress);
+    // Hide projects since we haven't done it yet.
+    document.getElementById('projects-section').remove();
     doDataFills();
 }
 

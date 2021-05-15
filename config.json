@@ -13,28 +13,34 @@
     "achievementsSubtitle": "Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.",
     "achievements": [
         {
-            "title": "grape thing",
-            "description": "lorem ipsum"
+            "icon": "trophy",
+            "title": "2x Global CEO Award Winner",
+            "description": "I won the global CEO award for two consecutive years for innovating, leading & pioneering in BI Technology"
         },
         {
-            "title": "grape thing",
-            "description": "lorem ipsum"
+            "icon": "analytics",
+            "title": "Successfully implemented data strategies",
+            "description": "Developed and executed the strategy for data curation, engineering, governance as well as RPA, machine learning and business intelligence"
         },
         {
-            "title": "grape thing",
-            "description": "lorem ipsum"
+            "icon": "git-network",
+            "title": "Successfully Machine Learning programs",
+            "description": "Led the successful implementation of churn prediction model, brand loyalty and ad effectiveness based on customer sentiments"
         },
         {
-            "title": "grape thing",
-            "description": "lorem ipsum"
+            "icon": "settings",
+            "title": "Successfully rolled out automation platform",
+            "description": "Led automation program utilising uiPath and Alteryx to reduce manual processes and achieving optimised "
         },
         {
-            "title": "grape thing",
-            "description": "lorem ipsum"
+            "icon": "cash",
+            "title": "Successfully developed and executed finance transformation",
+            "description": "Successfully leveraged technology to roll out the finance transformation in order to deliver seamless and integrated financial solutions"
         },
         {
-            "title": "grape thing",
-            "description": "lorem ipsum"
+            "icon": "people",
+            "title": "Developed and mentored highly successful and engaged teams",
+            "description": "Successfully developed and mentored high performing & engaging team and culture of innovation in the data and BI space whilst ensuring mental health and well being of teams"
         }
     ],
     "quotes": [
