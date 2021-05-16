@@ -73,6 +73,14 @@
                 "Finance and Reporting Manager"
             ],
             "symbols": ["News", "ASX:NWS|12M"]
+        },
+        "inchcape": {
+            "title": "Inchcape Pty Ltd",
+            "description": "Inchcape is a leading player in the automotive services sector operating in the distribution, retail and logistics markets.. Inchcape is an independent, multi-brand automotive Distributor with operations that span countries on five continents with 15,000 employees. Inchcape has over 170 years of successful internal trade experience. Inchcape proudly imports and distributes retail quality vehicles on behalf of 30+ brand partners 34 countries and provide premium parts logistics and vehicle delivery services with AutoNexus. Their vision is to be to be The world's most trusted automotive Distributor and Retailer.",
+            "roles": [
+                "Head of Regional BI"
+            ],
+            "symbols": ["News", "LON:INCH|12M"]
         }
     },
     "workHistory": [
