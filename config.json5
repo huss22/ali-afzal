@@ -80,7 +80,39 @@
             "roles": [
                 "Head of Regional BI"
             ],
-            "symbols": ["News", "LON:INCH|12M"]
+            "symbols": ["Inchcape", "LSE:INCH|12M"]
+        },
+        "subaru": {
+            "title": "Subaru Corporation",
+            "description": "Subaru is the automobile manufacturing division of Japanese transportation conglomerate Subaru Corporation, the twenty-first largest automaker by production worldwide in 2017. Subaru cars are known for their use of a boxer engine layout in most vehicles above 1500cc. In Australia, Subaru brand is the 6th largest automotive brand of choice for consumers. They own a significant market share across the globe and are constantly innovating to grow their market share. They are known for their reliability and performance.",
+            "roles": [
+                "Head of BI"
+            ],
+            "symbols": ["Subaru", "LSE:INCH|12M"]
+        },
+        "dnata": {
+            "title": "Dnata",
+            "description": "Dnata is a global organisation established in 1959 in Dubai and soon expanded across the globe. They service international and domestic flights by providing airline ground handling services, cargo services, passenger services and flight catering services. Dnata employees 41,000 people who handle passenger, cargo, ramp and technical services for airline. Globally, dnata also provides airport services to over 126 airports.",
+            "roles": [
+                "Business Analyst"
+            ],
+            "symbols": ["News", "LSE:INCH|12M"]
+        },
+        "featherdale": {
+            "title": "Featherdale Wildlife Park",
+            "description": "Featherdale Wildlife Park is a wildlife tourism facility located in Doonside, Sydney, Australia. The park is located in Sydney’s south-west, approximately 40 kilometres from Sydney’s CBD. The park contains various species, native to Australia, and is known to be one of the world’s largest collections of Australian fauna.. It specialises in Australian native wildlife and birds, as well as reptiles and marsupials.",
+            "roles": [
+                "Financial Controller"
+            ],
+            "symbols": ["Featherdale", "ASX:EVT|12M"]
+        },
+        "rydges": {
+            "title": "Rydges Hotel",
+            "description": "Rydges Hotels & Resorts, or Rydges, is a hotel accommodation and hospitality provider that operates in Australia and New Zealand. Rydges accommodates one million guests annually, across a range of market segments. Rydges is a subsidiary of the ASX-listed Event Hospitality and Entertainment, a corporation that owns and operates brands in the entertainment, hospitality, and leisure sectors, mainly within Australasia. Rydges operates 7,400 rooms in 2 countries with 60 properties.",
+            "roles": [
+                "Financial Accountant"
+            ],
+            "symbols": ["Rydges", "ASX:EVT|12M"]
         }
     },
     "workHistory": [
