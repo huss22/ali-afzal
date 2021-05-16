@@ -10,7 +10,7 @@
         "Finally, I joined News Corp to lead the finance data strategy and transformation. Working closely with technology team, finance teams, executive team and organisational stakeholders to deliver a unified finance data solution. Implementation of the strategy was instrumental in reducing errors, achieving timely reporting, simplifying data structures, rolling out governance and developing new insights and analytics. ",
         "I have also worked with extremely passionate leaders who have mentored me and guided me in my journey. Through great leadership and mentorship I have been able to become the leader I am and have led many teams to success. I believe in being passionate about what you do and having fun whilst delivering business results."
     ],
-    "achievementsSubtitle": "Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.",
+    "achievementsSubtitle": "I am constantly pushing myself to innovate and lead in the space of Business Intelligence, data and analytics.",
     "achievements": [
         {
             // This can be any icon from https://ionic.io/ionicons.
@@ -66,8 +66,8 @@
     ],
     "modals": {
         "newscorp": {
-            "title": "Newscorp Australia",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquam odio et urna pellentesque condimentum. Praesent auctor pellentesque tortor.",
+            "title": "News Corp Australia",
+            "description": "News Corp Australia is one of Australia’s largest media organisation with over 8,000 employees. News Corp publishes over 150 titles and are reaching 7.2m plus Australians everyday. They are the number 1 source for News across Australia as the most trusted and valued brand for Australian News. News Corp Australia is one of Australia’s largest media organisation with over 8,000 employees . News Corp publishes over 150 titles and are reaching 7.2m plus Australians everyday. They are the number 1 source for News across Australia as the most trusted and valued brand for Australian News.",
             "roles": [
                 "General Manager, Finance Stratagy & Data",
                 "Finance and Reporting Manager"
