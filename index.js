@@ -125,11 +125,10 @@ async function animateInfoOut() {
 function fillParagraphs(root, paragraphs) {
     root.innerHTML = '';
     for (let i = 0; i < paragraphs.length; i++) {
-        const paragraph = paragraphs[i];
-        root.appendChild(document.createTextNode(paragraph));
-        if (i !== paragraphs.length - 1) {
-            root.appendChild(document.createElement('br'));   
-        }                
+        const paragraphText = paragraphs[i];
+        const paragraph = document.createElement('p');
+        paragraph.innerText = paragraphText;
+        root.appendChild(paragraph);
     }
 }
 
@@ -288,7 +287,8 @@ function doDataFills() {
 }
 
 async function init() {
-    siteState.config = await (await fetch('config.json')).json();
+    const rawJson5 = await (await fetch('config.json5')).text();
+    siteState.config = JSON5.parse(rawJson5);
     siteState.dropdown = document.querySelector('nav .dropdown');
     initTimeline();
     await renderTimeline();
@@ -299,8 +299,6 @@ async function init() {
     document.querySelector('.cover').classList.add('hidden');
     document.body.addEventListener('click', onBodyClick);
     document.body.addEventListener('keydown', onKeyPress);
-    // Hide projects since we haven't done it yet.
-    document.getElementById('projects-section').remove();
     doDataFills();
 }
 

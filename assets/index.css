@@ -538,6 +538,10 @@ button.secondary {
     background-color: var(--secondary-color);
     clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 }
+#timeline-description > p {
+    padding: 0;
+    margin: 0;
+}
 .resume .controls {
     padding-top: 12px;
     width: 100%;
@@ -647,12 +651,15 @@ button.secondary {
     align-items: center;
 }
 
-.resume .info .content p {
+.resume .info .content #timeline-description {
     padding: 0;
     margin: 0;
     height: 100%;
     color: #444;
     width: 100%;
+}
+.resume .info .content #timeline-description p {
+    padding-top: 8px;
 }
 .resume .info .content ul {
     margin: 0;
@@ -677,7 +684,7 @@ button.secondary {
     .resume .info .content label:first-child {
         grid-area: 1/1/2/3;
     }
-    .resume .info .content p {
+    .resume .info .content #timeline-description {
         grid-area: 2/1/3/3;
     }
     .resume .info .content ul {
@@ -698,12 +705,17 @@ button.secondary {
 .about img {
     border-radius: 24px;
 }
+.about .row .text {
+    padding-left: 32px;
+}
+
 .about .row p {
     padding: 0;
-    padding-left: 32px;
+    margin: 0;
     text-align: left;
     color: #444;
     font-size: 1.2em;
+    padding-top: 8px;
 }
 
 @media only screen and (max-width: 1000px) {

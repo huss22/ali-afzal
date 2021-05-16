@@ -1,7 +1,7 @@
-1. Make scrollable regions obviously scrollable.
-2. Make resume work on mobile.
-3. Add ability to cut off long text with "see more" links.
-4. Major refactor
+0. Add coming soon.
+1. Add formattring to config
+1. Add ability to cut off long text with "see more" links.
+2. Major refactor
     > Pull out section into a common web component
     > Modal should be it's own component
     > Make api to close menu+modal on external click
