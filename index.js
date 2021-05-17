@@ -286,6 +286,22 @@ function doDataFills() {
     }
 }
 
+function doExpandables() {
+    for (const element of document.querySelectorAll('[data-expandable]')) {
+        const maxHeight = element.dataset.expandable;
+        element.style.maxHeight = `${maxHeight}px`;
+        element.style.position = 'relative';
+        const seeMore = document.createElement('div');
+        seeMore.classList = 'see-more';
+        seeMore.innerText = 'See More';
+        seeMore.addEventListener('click', () => {
+            element.style.maxHeight = '';
+            element.removeAttribute('data-expandable');
+        });
+        element.appendChild(seeMore);
+    }
+}
+
 async function init() {
     const rawJson5 = await (await fetch('config.json5')).text();
     siteState.config = JSON5.parse(rawJson5);
@@ -300,6 +316,7 @@ async function init() {
     document.body.addEventListener('click', onBodyClick);
     document.body.addEventListener('keydown', onKeyPress);
     doDataFills();
+    doExpandables();
 }
 
 window.onload = init;

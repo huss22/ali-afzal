@@ -26,6 +26,9 @@
         </div>
     </template>
     <nav>
+        <div class="logo-container">
+            <img src="assets/img/logo.svg">
+        </div>
         <div class="menu">
             <a href="#hero">Home</a>
             <a href="#resume">My Work</a>
@@ -44,9 +47,6 @@
             <a href="#projects-section">My Portfolio</a>
             <a href="#contact">Contact Me</a>
             </div>
-        </div>
-        <div class="center">
-            <img src="assets/img/logo.svg">
         </div>
     </nav>
     <div class="hero">
@@ -460,7 +460,7 @@
         <p data-fill="journeySubtitle"></p>
         <div class="row">
             <img src="assets/img/MyPic.jfif"/>
-            <div class="text" data-fill="journeyDetailed"></div>
+            <div class="text" data-expandable="250" data-fill="journeyDetailed"></div>
         </div>
     </div>
     <div class="achievements titled-section">
@@ -480,7 +480,8 @@
             <div class="placeholder-tile"></div>
         </div>
     </div>
-    <div id="review" class="quotes titled-section">
+    <div class="quotes titled-section">
+        <a class="anchor" id="review"></a>
         <h1>What my colleagues and my managers say about me</h1>
         <p>I have been working collaboratively for all my career and have built strong relationships with everyone I have worked with in the past.</p>
         <div class="scrollable" data-fill-list="quotes" data-fill-template="quote"></div>

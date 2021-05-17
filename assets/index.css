@@ -145,14 +145,14 @@ body {
 nav {
     width: 100%;
     box-sizing: border-box;
-    padding: 0 32px;
+    padding: 0px;
     height: var(--nav-height);
     border-bottom: 2px solid var(--seperator-color);
     font-weight: 700;
     font-size: 14px;
     color: var(--black);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 200px auto;
     position: fixed;
     top: 0;
     background: white;
@@ -164,7 +164,7 @@ nav .menu {
     display: flex;
     align-items: center;
 }
-nav .center {
+nav .logo-container {
     height: 100%;
     display: flex;
     align-items: center;
@@ -211,6 +211,7 @@ nav .dropdown {
     padding: 8px 0;
     opacity: 0;
     transition: opacity .05s ease-in;
+    left: 8px;
 }
 nav .dropdown a {
     padding: 8px 16px;
@@ -224,7 +225,10 @@ nav .dropdown a:hover {
     background: rgba(0, 0, 0, 0.07);
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 750px) {
+    nav {
+        grid-template-columns: 64px auto;
+    }
     nav .menu>a {
         display: none;
     }
@@ -233,6 +237,13 @@ nav .dropdown a:hover {
     }
     nav .dropdown {
         display: flex;
+    }
+    nav .menu {
+        grid-area: 1/1/2/2;
+        justify-content: center;
+    }
+    nav .logo-container {
+        grid-area: 1/2/2/3;
     }
 }
 button {
@@ -707,6 +718,27 @@ button.secondary {
 }
 .about .row .text {
     padding-left: 32px;
+    overflow: hidden;
+}
+[data-expandable]::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 64px;
+    background: linear-gradient(transparent, #ffffff 70%, #ffffff 100%);
+}
+[data-expandable] .see-more {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+    z-index: 5;
+    font-size: .9rem;
+    color: var(--primary-color);
+    opacity: .75;
 }
 
 .about .row p {
@@ -714,7 +746,7 @@ button.secondary {
     margin: 0;
     text-align: left;
     color: #444;
-    font-size: 1.2em;
+    font-size: 1em;
     padding-top: 8px;
 }
 
@@ -934,7 +966,7 @@ a {
 }
 .modal .card {
     width: 500px;
-    max-height: 500px;
+    max-height: calc(100vh - 32px);
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
