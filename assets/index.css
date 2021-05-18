@@ -249,6 +249,10 @@ nav .dropdown a:hover {
     nav .logo-container {
         grid-area: 1/2/2/3;
     }
+    nav .logo-container img {
+        /* Half of menu size so image is centered to screen not container. */
+        margin-right: 32px;
+    }
 }
 button {
     border-radius: 8px;
@@ -304,6 +308,9 @@ button.secondary {
 .hero svg .bob-down {
     animation: bob-down 7s ease-in-out infinite;
 }
+.hero .text-container {
+    margin-bottom: 48px;
+}
 .hero h1 {
     width: 50%;
     color: var(--text-primary);
@@ -321,9 +328,6 @@ button.secondary {
 .hero #small {
     display: none;
 }
-.hero .cta {
-    margin-bottom: 48px;
-}
 @media only screen and (max-width: 1000px) {
     .hero #large {
         display: none;
@@ -337,7 +341,7 @@ button.secondary {
     }
     .hero p {
         width: 100%;
-        font-size: .9em;
+        font-size: 1em;
     }
     .hero  {
         justify-content: flex-end;
@@ -351,14 +355,11 @@ button.secondary {
 }
 
 @media only screen and (max-width: 550px) {
-    .hero h1 {
-        font-size: 1.5em;
-    }
-    .hero p {
-        font-size: .8em;
-    }
     .hero {
         padding: 0 32px;
+    }
+    .hero .text-container  {
+        margin-bottom: calc(48px + 32px);
     }
 }
 
