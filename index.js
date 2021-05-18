@@ -36,6 +36,10 @@ const siteState = {
     },
 };
 
+function isMobile() {
+    return true;
+}
+
 function moveTimelineTo(i) {
     siteState.timeline.focused = i;
     renderTimeline();
@@ -175,6 +179,11 @@ async function renderTimeline() {
         li.innerText = r;
         listRoot.appendChild(li);
     }
+    if (isMobile()) {
+        document.getElementById('timeline-description').dataset.expandable = '300';
+        document.getElementById('timeline-responsibilities').dataset.expandable = '300';
+    }
+    doExpandables();
     siteState.timeline.runningAnimation = await animateInfoIn();
 }
 
@@ -289,6 +298,9 @@ function doDataFills() {
 function doExpandables() {
     for (const element of document.querySelectorAll('[data-expandable]')) {
         const maxHeight = element.dataset.expandable;
+        if (element.getBoundingClientRect().height <= parseInt(maxHeight)) {
+            continue;
+        }
         element.style.maxHeight = `${maxHeight}px`;
         element.style.position = 'relative';
         const seeMore = document.createElement('div');
@@ -297,6 +309,7 @@ function doExpandables() {
         seeMore.addEventListener('click', () => {
             element.style.maxHeight = '';
             element.removeAttribute('data-expandable');
+            seeMore.remove();
         });
         element.appendChild(seeMore);
     }

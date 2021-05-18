@@ -37,6 +37,9 @@
     }
 }
 
+* {
+    user-select: none;
+}
 .titled-section {
     border-top: 2px solid var(--seperator-color);
     padding: 32px 0;
@@ -138,6 +141,7 @@ body {
     --text-secondary: #777;
     --seperator-color: #e5e9f2;
     --text-muted: #999999;
+    --background-color: #ffffff;
     /* Dimentions */
     --nav-height: 72px;
     overflow: hidden;
@@ -235,7 +239,7 @@ nav .dropdown a:hover {
     nav #menu-button {
        display: block;
     }
-    nav .dropdown {
+    nav .dropdown.open {
         display: flex;
     }
     nav .menu {
@@ -594,6 +598,7 @@ button.secondary {
     width: 100%;
     padding-bottom: 32px;
     background: #F8f8f8;
+    --background-color: #F8f8f8;
 }
 .resume .info .cards-group {
     width: 100%;
@@ -606,8 +611,8 @@ button.secondary {
     display: flex;
 }
 .resume .info .cards .card-wrapper {
-    min-width: 350px;
-    max-width: 350px;
+    min-width: 300px;
+    max-width: 300px;
     height: 215px;
     display: grid;
     place-items: center;
@@ -646,7 +651,7 @@ button.secondary {
     margin: 0;
     padding: 0;
     padding-bottom: 12px;
-    font-size: 40px;
+    font-size: 2rem;
     color: var(--primary-color);
     opacity: .7;
 }
@@ -687,8 +692,15 @@ button.secondary {
 }
 
 @media only screen and (max-width: 1000px) {
+    .resume #timeline-role {
+        font-size: 1.8rem;
+    }
+    .resume .info .title {
+        padding: 16px;
+    }
     .resume .info .content {
         display: grid;
+        padding: 16px;
         grid-template-columns: auto;
         grid-template-rows: 32px auto 32px auto;
     }    
@@ -718,27 +730,36 @@ button.secondary {
 }
 .about .row .text {
     padding-left: 32px;
+}
+[data-expandable] {
     overflow: hidden;
+    position: relative;
 }
 [data-expandable]::after {
     content: '';
     position: absolute;
     width: 100%;
     bottom: 0px;
+    left: 0px;
     height: 64px;
-    background: linear-gradient(transparent, #ffffff 70%, #ffffff 100%);
+    background: linear-gradient(transparent, var(--background-color) 70%, var(--background-color) 100%);
 }
 [data-expandable] .see-more {
     position: absolute;
     bottom: 0px;
+    left: 0px;
     width: 100%;
-    text-align: center;
-    text-decoration: underline;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     cursor: pointer;
     z-index: 5;
     font-size: .9rem;
     color: var(--primary-color);
     opacity: .75;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .about .row p {
@@ -765,6 +786,10 @@ button.secondary {
         padding: 0;
         padding-top: 32px;
         text-align: center;
+    }
+    .about .row .text {
+        padding-left: 0;
+        overflow: hidden;
     }
 }
 
@@ -813,6 +838,11 @@ button.secondary {
     grid-row: span 2;
 }
 
+@media only screen and (max-width: 750px) {
+    .achievements .item {
+        height: auto;
+    }
+}
 @media only screen and (max-width: 650px) {
     .projects .tiles {
         grid-template-columns: auto;
@@ -829,6 +859,12 @@ button.secondary {
 
 .projects .placeholder-tile {
     background: var(--primary-color);
+    display: grid;
+    place-items: center;
+    color: rgba(255, 255, 255, .85);
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
 }
 
 .quotes {
@@ -976,7 +1012,7 @@ a {
 }
 @media only screen and (max-width: 550px) {
     .modal .card {
-        width: 400px;
+        width: calc(100% - 16px);
     }
 }
 
