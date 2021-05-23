@@ -139,6 +139,8 @@ function fillParagraphs(root, paragraphs) {
 async function renderTimeline() {
     const {runningAnimation, runningAnimationType} = siteState.timeline;
     const {points, focused, container} = siteState.timeline;
+    const description = document.getElementById('timeline-description');
+    const responsibilities = document.getElementById('timeline-responsibilities');
     if (runningAnimation && runningAnimationType === 'closing') {
         return;
     } else if (runningAnimation && runningAnimationType === 'opening') {
@@ -171,17 +173,40 @@ async function renderTimeline() {
         wrapper.appendChild(card);
         siteState.timeline.cardsContainer.appendChild(wrapper);
     }
-    fillParagraphs(document.getElementById('timeline-description'), job.description);
-    const listRoot = document.getElementById('timeline-responsibilities');
+    fillParagraphs(description, job.description);
+    const listRoot = responsibilities;
     listRoot.innerHTML = '';
     for (const r of job.responsibilities) {
         const li = document.createElement('li');
         li.innerText = r;
         listRoot.appendChild(li);
     }
+    description.style.maxHeight = '';
+    responsibilities.style.maxHeight = '';
     if (isMobile()) {
-        document.getElementById('timeline-description').dataset.expandable = '300';
-        document.getElementById('timeline-responsibilities').dataset.expandable = '300';
+        const seeMore = document.createElement('div');
+        seeMore.classList = 'see-more';
+        seeMore.innerText = 'See More';
+
+        if (description.getBoundingClientRect().height > 300) {
+            const firstButton = seeMore.cloneNode(true);
+            firstButton.addEventListener('click', () => {
+                description.style.maxHeight = '';
+                firstButton.remove();
+            });
+            description.style.maxHeight = '300px';
+            description.appendChild(firstButton);
+        }
+
+        if (responsibilities.getBoundingClientRect().height > 300) {
+            const secondButton = seeMore.cloneNode(true);
+            secondButton.addEventListener('click', () => {
+                responsibilities.style.maxHeight = '';
+                secondButton.remove();
+            });
+            responsibilities.style.maxHeight = '300px';
+            responsibilities.appendChild(secondButton);
+        }
     }
     doExpandables();
     siteState.timeline.runningAnimation = await animateInfoIn();
@@ -296,6 +321,9 @@ function doDataFills() {
 }
 
 function doExpandables() {
+    if (!isMobile()) {
+        return;
+    }
     for (const element of document.querySelectorAll('[data-expandable]')) {
         const maxHeight = element.dataset.expandable;
         element.style.maxHeight = `${maxHeight}px`;
@@ -309,9 +337,7 @@ function doExpandables() {
             seeMore.remove();
         });
 
-        if (!element.querySelector('.see-more')) {
-            element.appendChild(seeMore);
-        }
+        element.appendChild(seeMore);
     }
 }
 
