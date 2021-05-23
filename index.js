@@ -298,9 +298,6 @@ function doDataFills() {
 function doExpandables() {
     for (const element of document.querySelectorAll('[data-expandable]')) {
         const maxHeight = element.dataset.expandable;
-        if (element.getBoundingClientRect().height <= parseInt(maxHeight)) {
-            continue;
-        }
         element.style.maxHeight = `${maxHeight}px`;
         element.style.position = 'relative';
         const seeMore = document.createElement('div');
@@ -311,7 +308,10 @@ function doExpandables() {
             element.removeAttribute('data-expandable');
             seeMore.remove();
         });
-        element.appendChild(seeMore);
+
+        if (!element.querySelector('.see-more')) {
+            element.appendChild(seeMore);
+        }
     }
 }
 
