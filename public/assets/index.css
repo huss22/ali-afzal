@@ -84,7 +84,7 @@ a.anchor {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 20;
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     align-items: center;
     justify-content: center;
