@@ -84,7 +84,7 @@ a.anchor {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 20;
+    z-index: var(--loading-layer);
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     align-items: center;
     justify-content: center;
@@ -160,6 +160,11 @@ body {
     --background-color-rgb: 255, 255, 255;
     /* Dimentions */
     --nav-height: 72px;
+    /* Layers */
+    --see-more-layer: 1;
+    --navbar-layer: 2;
+    --modal-layer: 3;
+    --loading-layer: 4;
     overflow: hidden;
 }
 
@@ -177,7 +182,7 @@ nav {
     position: fixed;
     top: 0;
     background: white;
-    z-index: 10;
+    z-index: var(--navbar-layer);
 }
 
 nav .menu {
@@ -708,18 +713,19 @@ button.secondary {
     padding: 32px 0;
     overflow: scroll;
     display: flex;
+    font-size: .9rem;
 }
 
 .resume .info .cards .card-wrapper {
-    min-width: 300px;
-    max-width: 300px;
+    min-width: 350px;
+    max-width: 350px;
     height: 215px;
     display: grid;
     place-items: center;
 }
 
 .resume .info .cards .card-wrapper:last-child {
-    padding-right: 35px;
+    padding-right: 128px;
 }
 
 .resume .info .fade-layer {
@@ -733,7 +739,7 @@ button.secondary {
 }
 
 .resume .info .cards .card {
-    width: 250px;
+    width: 300px;
     text-align: center;
     box-sizing: border-box;
     padding: 16px;
@@ -869,7 +875,7 @@ button.secondary {
     justify-content: center;
     align-items: flex-end;
     cursor: pointer;
-    z-index: 5;
+    z-index: var(--see-more-layer);
     font-size: .9rem;
     color: var(--primary-color);
     opacity: .75;
@@ -1142,7 +1148,7 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: var(--modal-layer);
     display: none;
     place-items: center;
     background: rgba(0, 0, 0, 0.6);

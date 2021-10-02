@@ -121,11 +121,17 @@
             "company": "News Corp Australia",
             "range": "Jan 2020 to Current",
             "cards": [
-                "Streamlined weekly and  monthly finance data processes",
-                "Successfully implement finance data strategy",
-                "Led the development of unified finance data structures",
-                "Led the development of unified executive reporting suite",
-                "Successfully implemented and led automation & efficiencies"
+                "Led a successful transformation project that focused on stabilising the data warehouse, stabilising Tableau front end with better UI/UX, ensuring reporting is faster and eliminating ongoing data issues",
+                "Successfully removed silos between technology, finance and business users to focus on delivering a better data driven output for the organisation",
+                "Successfully delivered 1 year of error free month ends for finance",
+                "Scored the highest engagement scores in finance for two consecutive years as well as being one of the highest scores in the organisation",
+                "Delivered, unified executive dashboards developed on scalable data solutions",
+                "Reduced data refresh times daily from 9 hours to 15 minutes",
+                "Developed an automated and unified forecasting process. This process took 6 months in 2019, 1 month in 2020 and 2 weeks in 2021.",
+                "Developed a streamlined and secure salaries and wages data solution for Finance using Alteryx and Google Big Query to deliver automated salaries reporting",
+                "Set up data literacy programs to proactively educate & promote the use of data and teach new skill sets to finance users",
+                "Increased adoption of Business Intelligence and analytics by 40% YoY",
+                "Rolled out an engaging comms plan for delivering reporting and data solutions for end users",
             ],
             "description": [
                "As General Manager of Finance Strategy & data team, my focus has been on leading the finance data strategy to enable simplification, enhance processes, automate redundant workflows, develop a single source of truth framework for finance with clear data lineage to operational metrics whilst leading the team to grow and develop.",
@@ -152,11 +158,15 @@
             "company": "Inchcape",
             "range": "June 2017 to January 2020",
             "cards": [
-                "Winner CEO award for innovating, leading & pioneering in BI Technology",
-                "Successfully implemented a regional BI & Data Strategy",
-                "Led the development of a unified data warehouse in SAP",
-                "Led the development of business and executive dashboards",
-                "Successfully enhanced existing processes to reduce time & effort"
+                "Developed and implemented a holistic data strategy for recognising and interfacing with the various data assets in the business",
+                "Expaned to the Asia region by rolling out a unified data strategy across the Australasia region",
+                "Set up an offshore data delivery team in the Phillipines responsible for data maintenance, data development and engineering",
+                "Led data science initiatives including predictive forecast models for finance, customer sentimental analysis and lead scoring as examples",
+                "Led the delivery of all executive, operational and financial dashboards for the entire organisation with a unified approach towards performance tracking",
+                "Rolled out data lake house architecture powered by Databricks and using the Microsoft Azure stack",
+                "Rolled out multi tenant Power BI solution across the region with row level security by country, department and brand",
+                "Proactively promoted and introduced data literacy",
+                "Awarded Global CEO awards in two consecutive years for pioneering and innovating through data",
             ],
             "description": [
                 "In my role as Head of Regional BI, I developed the regional data and BI strategy to move the organisation into a unified data structure using SAP S4 HANA with Power BI. I set up an offshore team of data engineers, developers and analysts in Philippines that helped roll out the data strategy across all the countries in a seamless manner. The strategy was to ensure we reduce development costs whilst growing the BI vision.",
