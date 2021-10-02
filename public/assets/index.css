@@ -40,10 +40,12 @@
 svg {
     user-select: none;
 }
+
 .titled-section {
     border-top: 2px solid var(--seperator-color);
     padding: 32px 0;
 }
+
 .titled-section h1 {
     width: 100%;
     box-sizing: border-box;
@@ -52,12 +54,14 @@ svg {
     text-align: center;
     margin-bottom: 8px;
 }
+
 .titled-section p {
     box-sizing: border-box;
     padding: 0 32px;
     text-align: center;
     color: var(--text-secondary);
 }
+
 .flex-grid {
     width: 100%;
     display: flex;
@@ -66,12 +70,14 @@ svg {
     flex-wrap: wrap;
     padding: 32px 0;
 }
+
 a.anchor {
     display: block;
     position: relative;
     top: calc(-1 * var(--nav-height));
     visibility: hidden;
 }
+
 .cover {
     width: 100vw;
     height: 100vh;
@@ -87,6 +93,7 @@ a.anchor {
     transition: .3s ease-out;
     pointer-events: none;
 }
+
 .cover>div {
     width: 16px;
     height: 16px;
@@ -96,21 +103,27 @@ a.anchor {
     margin: 0 2px;
     animation: 2s bounce infinite ease-in-out;
 }
+
 .cover>div:nth-child(2) {
     animation-delay: .2s;
 }
+
 .cover>div:nth-child(3) {
     animation-delay: .4s;
 }
+
 .cover>div:nth-child(4) {
     animation-delay: .6s;
 }
+
 .cover>div:nth-child(5) {
     animation-delay: .8s;
 }
+
 .cover.hidden {
     opacity: 0;
 }
+
 @media only screen and (max-width: 1000px) {
     .titled-section h1 {
         font-size: 1.8em;
@@ -119,6 +132,7 @@ a.anchor {
         font-size: 1em;
     }
 }
+
 @media only screen and (max-width: 650px) {
     .titled-section h1 {
         font-size: 1.4em;
@@ -135,7 +149,7 @@ body {
     margin: 0;
     scroll-behavior: smooth;
     /* Colors */
-    --primary-color:#0052d4;
+    --primary-color: #0052d4;
     --primary-color-rgb: 0, 82, 212;
     --secondary-color: #6fb1fc;
     --text-primary: black;
@@ -143,11 +157,12 @@ body {
     --seperator-color: #e5e9f2;
     --text-muted: #999999;
     --background-color: #ffffff;
-    --background-color-rgb: 255,255,255;
+    --background-color-rgb: 255, 255, 255;
     /* Dimentions */
     --nav-height: 72px;
     overflow: hidden;
 }
+
 nav {
     width: 100%;
     box-sizing: border-box;
@@ -170,6 +185,7 @@ nav .menu {
     display: flex;
     align-items: center;
 }
+
 nav .logo-container {
     height: 100%;
     display: flex;
@@ -182,29 +198,36 @@ nav a {
     cursor: pointer;
     color: black;
 }
+
 nav a:hover {
     color: var(--secondary-color);
 }
+
 nav img {
     height: 85%;
 }
+
 nav #menu-button {
     display: none;
 }
+
 nav .menu img {
     width: 32px;
     cursor: pointer;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
+
 button {
     user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
+
 a {
     user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
+
 nav .dropdown {
     position: absolute;
     display: none;
@@ -219,14 +242,17 @@ nav .dropdown {
     transition: opacity .05s ease-in;
     left: 8px;
 }
+
 nav .dropdown a {
     padding: 8px 16px;
     color: #222;
 }
+
 nav .dropdown.open {
     opacity: 1;
     transition: opacity .05s ease-out;
 }
+
 nav .dropdown a:hover {
     background: rgba(0, 0, 0, 0.07);
 }
@@ -239,7 +265,7 @@ nav .dropdown a:hover {
         display: none;
     }
     nav #menu-button {
-       display: block;
+        display: block;
     }
     nav .dropdown.open {
         display: flex;
@@ -256,6 +282,7 @@ nav .dropdown a:hover {
         margin-right: 32px;
     }
 }
+
 button {
     border-radius: 8px;
     height: 40px;
@@ -267,10 +294,12 @@ button {
     font-weight: 600;
     transition: all .3s ease-in-out;
 }
+
 button:hover {
     filter: brightness(1.1);
     transform: scale(1.05);
 }
+
 button.secondary {
     background: var(--secondary-color);
 }
@@ -287,6 +316,7 @@ button.secondary {
     justify-content: center;
     flex-direction: column;
 }
+
 .hero .background {
     width: 100%;
     height: 100%;
@@ -299,37 +329,46 @@ button.secondary {
     display: flex;
     justify-content: flex-end;
 }
+
 .hero .background svg {
     height: 100%;
     transform: scale(1) translateX(0);
 }
+
 .hero svg .bob-up {
     animation: bob-up 5s ease-in-out infinite;
     animation-delay: 2s;
 }
+
 .hero svg .bob-down {
     animation: bob-down 7s ease-in-out infinite;
 }
+
 .hero .text-container {
     margin-bottom: 48px;
 }
+
 .hero h1 {
     width: 50%;
     color: var(--text-primary);
     font-size: 2.1em;
     margin-bottom: 16px;
 }
+
 .hero p {
     width: 45%;
     color: var(--text-secondary);
     font-size: 1em;
 }
+
 .hero .cta button:first-child {
     margin-right: 8px;
 }
+
 .hero #small {
     display: none;
 }
+
 @media only screen and (max-width: 1000px) {
     .hero #large {
         display: none;
@@ -345,7 +384,7 @@ button.secondary {
         width: 100%;
         font-size: 1em;
     }
-    .hero  {
+    .hero {
         justify-content: flex-end;
     }
     .hero .background {
@@ -360,7 +399,7 @@ button.secondary {
     .hero {
         padding: 0 32px;
     }
-    .hero .text-container  {
+    .hero .text-container {
         margin-bottom: calc(48px + 32px);
     }
 }
@@ -378,6 +417,7 @@ button.secondary {
     column-gap: 24px;
     row-gap: 24px;
 }
+
 .summary .text {
     grid-area: text;
     height: 100%;
@@ -386,30 +426,36 @@ button.secondary {
     justify-content: center;
     align-items: flex-start;
 }
+
 .summary .text h1 {
     margin: 0;
     margin-bottom: 8px;
     color: var(--text-primary);
 }
+
 .summary .text p {
     margin: 0;
     margin-bottom: 8px;
     color: var(--text-secondary);
 }
+
 .summary img {
     grid-area: 1/1/2/3;
     height: var(--icon-size);
     width: var(--icon-size);
 }
+
 .summary .aside h1 {
     font-size: 1.3em;
     margin: 0;
 }
+
 .summary .aside p {
     margin: 0;
     padding: 0;
     color: var(--text-secondary);
 }
+
 .summary .aside {
     display: flex;
     flex-direction: column;
@@ -417,21 +463,25 @@ button.secondary {
     justify-content: center;
     margin-left: 24px;
 }
+
 .summary .field1 {
     display: flex;
     align-items: center;
     grid-area: field1;
 }
+
 .summary .field2 {
     display: flex;
     align-items: center;
     grid-area: field2;
 }
+
 .summary .field3 {
     display: flex;
     align-items: center;
     grid-area: field3;
 }
+
 .summary .field4 {
     display: flex;
     align-items: center;
@@ -476,7 +526,7 @@ button.secondary {
     }
     .summary .aside p {
         font-size: .8em;
-    }   
+    }
 }
 
 .logos img {
@@ -496,6 +546,7 @@ button.secondary {
     padding-top: 32px;
     border-top: 2px solid var(--seperator-color);
 }
+
 .resume .timeline {
     height: var(--timeline-height);
     width: 100%;
@@ -506,6 +557,7 @@ button.secondary {
     margin-top: 32px;
     --entry-width: 400px;
 }
+
 .resume .timeline .entries {
     height: calc(var(--timeline-height) - 2px);
     --arrow-width: 16px;
@@ -515,10 +567,12 @@ button.secondary {
     transform: translateX(calc(50% - var(--entry-width) / 2));
     transition: all .4s ease-in-out;
 }
+
 .resume .timeline svg {
     width: 100%;
     opacity: .8;
 }
+
 .resume .timeline .entries .entry {
     width: var(--entry-width);
     height: 100%;
@@ -528,12 +582,15 @@ button.secondary {
     opacity: .5;
     cursor: pointer;
 }
+
 .resume .timeline .entries .entry:hover {
     opacity: .8;
 }
+
 .resume .timeline .entries .entry.active {
     opacity: 1;
 }
+
 .resume .timeline .entries .entry div {
     background-color: var(--secondary-color);
     width: fit-content;
@@ -546,6 +603,7 @@ button.secondary {
     font-size: 16px;
     position: relative;
 }
+
 .resume .timeline .entries .entry div::after {
     content: '';
     position: absolute;
@@ -556,19 +614,24 @@ button.secondary {
     background-color: var(--secondary-color);
     clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 }
+
 #timeline-description {
     overflow: hidden;
     position: relative;
 }
+
 #timeline-responsibilities {
     overflow: hidden;
     position: relative;
 }
-#timeline-description > p {
+
+#timeline-description>p {
     padding: 0;
     margin: 0;
 }
-#timeline-description .see-more, #timeline-responsibilities .see-more {
+
+#timeline-description .see-more,
+#timeline-responsibilities .see-more {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -584,6 +647,7 @@ button.secondary {
     font-weight: bold;
     cursor: pointer;
 }
+
 .resume .controls {
     padding-top: 12px;
     width: 100%;
@@ -592,6 +656,7 @@ button.secondary {
     justify-content: center;
     background: #F8f8f8;
 }
+
 .resume .controls .nav {
     width: 58px;
     height: 32px;
@@ -602,6 +667,7 @@ button.secondary {
     align-items: center;
     justify-content: space-between;
 }
+
 .resume .controls .nav button {
     background: initial;
     padding: 0;
@@ -614,13 +680,16 @@ button.secondary {
     place-items: center;
     transform: rotate(-90deg);
 }
+
 .resume .controls .nav button svg {
     width: 16px;
     height: 16px;
 }
+
 .resume .controls .nav button:first-child {
     transform: rotate(90deg);
 }
+
 .resume .info {
     width: 100%;
     padding-bottom: 32px;
@@ -628,16 +697,19 @@ button.secondary {
     --background-color: #F8f8f8;
     --background-color-rgb: 248, 248, 248;
 }
+
 .resume .info .cards-group {
     width: 100%;
     position: relative;
 }
+
 .resume .info .cards {
     width: 100%;
     padding: 32px 0;
     overflow: scroll;
     display: flex;
 }
+
 .resume .info .cards .card-wrapper {
     min-width: 300px;
     max-width: 300px;
@@ -645,18 +717,20 @@ button.secondary {
     display: grid;
     place-items: center;
 }
+
 .resume .info .cards .card-wrapper:last-child {
     padding-right: 35px;
 }
+
 .resume .info .fade-layer {
-    width:100%;
-    height:100%;    
-    position:absolute;
-    right:0;
-    top:0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
     background: linear-gradient(90deg, #F8f8f800 85%, #F8f8f8 96%, #F8f8f8 100%);
     pointer-events: none;
-  }
+}
 
 .resume .info .cards .card {
     width: 250px;
@@ -672,9 +746,11 @@ button.secondary {
     justify-content: center;
 }
 
-.resume .info .title, .resume .info .content {
+.resume .info .title,
+.resume .info .content {
     padding: 32px 64px 0 64px;
 }
+
 .resume .info .title h1 {
     margin: 0;
     padding: 0;
@@ -683,11 +759,13 @@ button.secondary {
     color: var(--primary-color);
     opacity: .7;
 }
+
 .resume .info .title p {
     margin: 0;
     padding: 0;
     color: var(--text-muted);
 }
+
 .resume .info .content label {
     color: #444;
     font-weight: bold;
@@ -702,9 +780,11 @@ button.secondary {
     color: #444;
     width: 100%;
 }
+
 .resume .info .content #timeline-description p {
     padding-top: 8px;
 }
+
 .resume .info .content ul {
     margin: 0;
     width: 100%;
@@ -731,7 +811,7 @@ button.secondary {
         padding: 16px;
         grid-template-columns: auto;
         grid-template-rows: 32px auto 32px auto;
-    }    
+    }
     .resume .info .content label:first-child {
         grid-area: 1/1/2/3;
     }
@@ -753,18 +833,22 @@ button.secondary {
     padding: 0 64px;
     align-items: center;
 }
+
 .about img {
     width: 196px;
     border-radius: 24px;
     box-shadow: 0px 4px 3px 0px rgb(0 0 0 / 20%);
 }
+
 .about .row .text {
     padding-left: 32px;
 }
+
 [data-expandable] {
     overflow: hidden;
     position: relative;
 }
+
 [data-expandable]::after {
     content: '';
     position: absolute;
@@ -774,6 +858,7 @@ button.secondary {
     height: 64px;
     background: linear-gradient(rgba(var(--background-color-rgb), 0), var(--background-color) 70%, var(--background-color) 100%);
 }
+
 [data-expandable] .see-more {
     position: absolute;
     bottom: 0px;
@@ -806,6 +891,7 @@ button.secondary {
         font-size: 1em;
     }
 }
+
 @media only screen and (max-width: 750px) {
     .about .row {
         flex-direction: column;
@@ -833,31 +919,43 @@ button.secondary {
     padding: 16px 32px;
     height: 300px;
 }
+
 .achievements .item ion-icon {
     width: 48px;
     height: 48px;
     color: var(--primary-color);
     margin: 16px 0;
 }
+
 .achievements .item h1 {
     font-size: 1.4rem;
     margin: 16px 0;
     padding: 0;
 }
+
 .achievements .item p {
     margin: 0;
     padding: 0;
 }
 
 .projects .tiles {
-    width: 100%;
     box-sizing: border-box;
-    padding: 32px 64px;
+    padding: 32px 0;
     height: 500px;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
-    gap: 16px;
+    width: 100%;
+    overflow: scroll;
+}
+
+.projects .tiles .scrolling {
+    height: 100%;
+    margin-left: 64px;
+    width: fit-content;
+    display: flex;
+}
+
+.projects .tiles img {
+    height: 100%;
+    padding: 0 16px;
 }
 
 .projects .placeholder-tile:nth-of-type(1) {
@@ -873,6 +971,7 @@ button.secondary {
         height: auto;
     }
 }
+
 @media only screen and (max-width: 650px) {
     .projects .tiles {
         grid-template-columns: auto;
@@ -898,11 +997,14 @@ button.secondary {
 }
 
 .quotes {
+    /** Not needed for now */
+    display: none;
     border-top: none;
     background: #f2f2f2;
     --arrow-width: 32px;
     --arrow-height: 24px;
 }
+
 .scrollable {
     width: 100%;
     padding: 32px 0;
@@ -915,29 +1017,36 @@ button.secondary {
     width: 6px;
     height: 6px;
 }
+
 .scrollables::-webkit-scrollbar-track {
     background: none;
 }
+
 .scrollable::-webkit-scrollbar-thumb {
-        background-color: #999;
-        border-radius: 12px;
+    background-color: #999;
+    border-radius: 12px;
 }
+
 @media only screen and (max-width: 1000px) {
     .scrollable {
         justify-content: flex-start;
     }
 }
+
 .quotes .quote {
     display: flex;
     flex-direction: column;
     padding: 0 16px;
 }
+
 .quotes .quote:first-child {
     padding-left: 32px;
 }
+
 .quotes .quote:last-child {
     padding-right: 32px;
 }
+
 .quotes .quote .bubble {
     min-width: 350px;
     max-width: 350px;
@@ -951,6 +1060,7 @@ button.secondary {
     margin-bottom: 72px;
     position: relative;
 }
+
 .quotes .quote .bubble::after {
     content: '';
     position: absolute;
@@ -961,22 +1071,27 @@ button.secondary {
     background-color: white;
     clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 }
+
 .quotes .quote .bubble h1 {
     font-size: 1.3em;
 }
+
 .quotes .quote .bubble p {
     font-size: 1rem;
 }
+
 .quotes .quote h1 {
     font-size: 1rem;
     margin: 0;
     padding: 0;
 }
+
 .quotes .quote p {
     padding: 8px 0;
     margin: 0;
     font-size: .9rem;
 }
+
 .contact {
     width: 100%;
     height: 400px;
@@ -986,6 +1101,7 @@ button.secondary {
     justify-content: center;
     flex-direction: column;
 }
+
 .contact h1 {
     color: white;
     font-size: 2.3em;
@@ -993,17 +1109,20 @@ button.secondary {
     padding: 32px 64px;
     text-align: center;
 }
+
 @media only screen and (max-width: 1000px) {
     .contact h1 {
         font-size: 2em;
     }
 }
+
 @media only screen and (max-width: 650px) {
     .contact h1 {
         padding: 32px;
         font-size: 1.5em;
     }
 }
+
 .contact button {
     background: white;
     color: var(--primary-color);
@@ -1012,6 +1131,7 @@ button.secondary {
     display: grid;
     place-items: center;
 }
+
 a {
     text-decoration: none;
 }
@@ -1027,9 +1147,11 @@ a {
     place-items: center;
     background: rgba(0, 0, 0, 0.6);
 }
+
 .modal.shown {
     display: grid;
 }
+
 .modal .card {
     width: 500px;
     max-height: calc(100vh - 32px);
@@ -1038,18 +1160,21 @@ a {
     box-sizing: border-box;
     background: white;
     border-radius: 12px;
-    box-shadow: 0px 4px 12px 4px rgba(0,0,0,0.07);
+    box-shadow: 0px 4px 12px 4px rgba(0, 0, 0, 0.07);
 }
+
 @media only screen and (max-width: 550px) {
     .modal .card {
         width: calc(100% - 16px);
     }
 }
 
-.modal .card h1, .modal .card p {
+.modal .card h1,
+.modal .card p {
     margin: 0;
     padding: 0;
 }
+
 .modal .card h1 {
     color: var(--primary-color);
     font-size: 1.8rem;
@@ -1057,16 +1182,19 @@ a {
     text-align: center;
     padding-top: 24px;
 }
+
 .modal .card p {
     font-size: 1rem;
     margin: 24px 32px;
     color: var(--text-secondary);
 }
+
 .modal .card .stock {
     width: 100%;
     height: 250px;
     padding-top: 16px;
 }
+
 .modal .card .chips {
     width: 100%;
     box-sizing: border-box;
@@ -1076,6 +1204,7 @@ a {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .modal .card .chips .chip {
     font-size: .7rem;
     padding: 8px 8px;
@@ -1084,6 +1213,7 @@ a {
     background: var(--secondary-color);
     color: white;
 }
+
 .modal .card label {
     width: 100%;
     box-sizing: border-box;

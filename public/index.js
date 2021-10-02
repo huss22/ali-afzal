@@ -6,13 +6,13 @@ function div(className) {
 
 function fadeAnimation(delay, total, direction) {
     let base = [
-        { transform: 'scale(1)', opacity: 1, offset: delay/total},
+        { transform: 'scale(1)', opacity: 1, offset: delay / total },
         { transform: 'scale(.8)', opacity: 0, offset: 1 }
     ];
-    let delayKeyframe =  { transform: 'scale(1)', opacity: 1, offset: 0 };
+    let delayKeyframe = { transform: 'scale(1)', opacity: 1, offset: 0 };
     if (direction === 'in') {
         base.reverse();
-        base[0].offset = delay/total;
+        base[0].offset = delay / total;
         base[1].offset = 1;
         delayKeyframe = { transform: 'scale(.8)', opacity: 0, offset: 0 };
     }
@@ -37,7 +37,7 @@ const siteState = {
 };
 
 function isMobile() {
-    return true;
+    return !!window.matchMedia("(max-width: 700px)").matches;
 }
 
 function moveTimelineTo(i) {
@@ -56,7 +56,7 @@ function moveTimeline(delta) {
     renderTimeline();
 }
 
-function initTimeline() { 
+function initTimeline() {
     const cardsContainer = document.querySelector('.info .cards');
     const container = document.querySelector('.timeline .entries');
     const contentTitle = document.querySelector('.info .title');
@@ -89,13 +89,13 @@ function initTimeline() {
 function groupFadeAnimation(elements, direction) {
     const animations = [];
     const animationFinishPromises = [];
-    for(let i = 0; i < elements.length; i++) {
+    for (let i = 0; i < elements.length; i++) {
         const e = elements[i];
         e.style.opacity = direction === 'out' ? '0' : '1';
-        const delay = i*80;
+        const delay = i * 80;
         const total = 80 + delay;
         const keyframes = fadeAnimation(delay, total, direction);
-        const animation = e.animate(keyframes, {duration: total, easing: 'ease-out'});
+        const animation = e.animate(keyframes, { duration: total, easing: 'ease-out' });
         animations.push(animation);
         animationFinishPromises.push(new Promise(resolve => {
             animation.onfinish = resolve;
@@ -137,8 +137,8 @@ function fillParagraphs(root, paragraphs) {
 }
 
 async function renderTimeline() {
-    const {runningAnimation, runningAnimationType} = siteState.timeline;
-    const {points, focused, container} = siteState.timeline;
+    const { runningAnimation, runningAnimationType } = siteState.timeline;
+    const { points, focused, container } = siteState.timeline;
     const description = document.getElementById('timeline-description');
     const responsibilities = document.getElementById('timeline-responsibilities');
     if (runningAnimation && runningAnimationType === 'closing') {
@@ -157,7 +157,7 @@ async function renderTimeline() {
             item.classList.add('active');
         }
     }
-    
+
     const job = siteState.timeline.data[siteState.timeline.focused];
     document.getElementById('timeline-role').innerText = job.role;
     document.getElementById('timeline-company').innerText = job.company;
@@ -235,8 +235,7 @@ function throwModal(modalId) {
         root.querySelector('[data-roles]').appendChild(chip);
     }
     const smallScreen = window.matchMedia('(max-width: 550px)').matches;
-    new TradingView.MediumWidget(
-        {
+    new TradingView.MediumWidget({
         "symbols": [info.symbols],
         "chartOnly": smallScreen,
         "width": "100%",
@@ -303,7 +302,7 @@ function doDataFills() {
         root.innerHTML = '';
         const template = document.getElementById(root.dataset.fillTemplate);
         const field = root.dataset.fillList;
-        
+
         for (const data of siteState.config[field]) {
             const element = template.content.cloneNode(true);
             for (const bindingElement of element.querySelectorAll('[data-input]')) {
@@ -311,7 +310,7 @@ function doDataFills() {
                     const attr = bindingElement.dataset.inputBind;
                     bindingElement.setAttribute(attr, data[bindingElement.dataset.input]);
                 } else {
-                    bindingElement.innerText = data[bindingElement.dataset.input];   
+                    bindingElement.innerText = data[bindingElement.dataset.input];
                 }
             }
             root.appendChild(element);
@@ -321,10 +320,16 @@ function doDataFills() {
 }
 
 function doExpandables() {
+    const targetElements = Array.from(document.querySelectorAll('[data-expandable]'));
     if (!isMobile()) {
+        targetElements.map(e => e.removeAttribute('data-expandable'));
         return;
     }
-    for (const element of document.querySelectorAll('[data-expandable]')) {
+
+    for (const element of targetElements) {
+        if (element.querySelector('.see-more')) {
+            continue;
+        }
         const maxHeight = element.dataset.expandable;
         element.style.maxHeight = `${maxHeight}px`;
         element.style.position = 'relative';
