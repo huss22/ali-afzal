@@ -24,9 +24,9 @@
             "description": "Developed and executed the strategy for data curation, engineering, governance as well as RPA, machine learning and business intelligence"
         },
         {
-            "icon": "git-network",
-            "title": "Successfully Led Machine Learning programs",
-            "description": "Led the successful implementation of churn prediction model, brand loyalty and ad effectiveness based on customer sentiments"
+            "icon": "people",
+            "title": "Developed and mentored highly successful and engaged teams",
+            "description": "Successfully developed and mentored high performing & engaging team and created a culture of innovation in the data and BI space whilst ensuring mental health, passion and well being of teams"
         },
         {
             "icon": "settings",
@@ -39,10 +39,10 @@
             "description": "Successfully leveraged technology to roll out the finance transformation in order to deliver seamless and integrated financial solutions"
         },
         {
-            "icon": "people",
-            "title": "Developed and mentored highly successful and engaged teams",
-            "description": "Successfully developed and mentored high performing & engaging team and created a culture of innovation in the data and BI space whilst ensuring mental health, passion and well being of teams"
-        }
+            "icon": "git-network",
+            "title": "Successfully Led Machine Learning programs",
+            "description": "Led the successful implementation of churn prediction model, brand loyalty and ad effectiveness based on customer sentiments"
+        },
     ],
     "quotes": [
         {
