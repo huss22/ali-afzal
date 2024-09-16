@@ -1,4 +1,4 @@
-0. Add coming soon.
+1. Fix see more happening on short text where it's a no op.
 1. Add formattring to config
 2. coming soon.
 3. Major refactor
